@@ -14,7 +14,6 @@ class NewsAppDashboard extends Component{
             <div className="channel-div" >
                 <ChannelField/>
             </div>
-            
             </div>
         )
     }

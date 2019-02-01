@@ -14,9 +14,8 @@ class Button extends React.Component {
     render() {
         const {url} =this.props;
       return (
-        <button className="button button-primary">
         <a href={url}  style={{color:"blue", fontSize:15,}}>Read more</a>
-        </button>
+       
       )
     }
   }
@@ -39,7 +38,8 @@ class CardHeader extends React.Component {
       const { image, category } = this.props;
       var style = { 
           backgroundImage: 'url(' + image + ')',
-          height:"200px"
+          height:"200px",
+        margintop:"-10px"
       };
       return (
         <header style={style} className="card-header">
@@ -51,9 +51,11 @@ class CardHeader extends React.Component {
 class CardBody extends Component {
     render() {
         const { description, content, publishedAt,url } = this.props;
+        var str=publishedAt;
+        var publishedOn = str.slice(0, 10);
       return (
         <div className="card-body">
-          <p className="date">{publishedAt}</p>
+          <p className="date" >Published On: {publishedOn}</p>
           <p className="card-description">{description}</p>
           <p className="body-content">{content}</p>
           <Button url={url}/>

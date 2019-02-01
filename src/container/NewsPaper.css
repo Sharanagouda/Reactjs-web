@@ -77,3 +77,10 @@
   font-weight: 700;
   color: #333333;
 }
+.card-header-category{
+  padding-left: 10px;
+
+}
+.date{
+  padding-top: 5px;
+}

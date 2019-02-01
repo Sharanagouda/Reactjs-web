@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
-import {selectBook,getALLEmployee} from "./../action";
+import {selectBook} from "./../action";
 import {bindActionCreators} from "redux";
+import BookDetatils from "./bookDetails";
+import AddNewBook from "./addNewBook";
 
-
-class MyBlog extends Component {
+class Dashboard extends Component {
 
   componentDidMount(){
-    this.props.getALLEmployee();
-    //console.log(employee)
+    //this.props.getEmployee();
   }
 
   renderList(){
@@ -19,12 +19,12 @@ class MyBlog extends Component {
   }
 
   render() {
-    const {getALLEmployee} =this.props;
-    console.log(getALLEmployee);
     return (
       <div>
         <p>This is a landing home page</p>
         <ul >{this.renderList()}</ul>
+        <BookDetatils/>
+        <AddNewBook/>
       </div>
     );
   }
@@ -33,7 +33,6 @@ class MyBlog extends Component {
 function mapStateToProps(state){
   return {
     books:state.books,
-    selectedBook:state.selectedBook
   }
 }
     
@@ -41,8 +40,8 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
   return bindActionCreators({
-    selectBook:selectBook,
-    getALLEmployee:getALLEmployee
+    selectBook:selectBook
   },dispatch);
 };
-export default connect(mapStateToProps,mapDispatchToProps)(MyBlog);
+
+export default connect(mapStateToProps,mapDispatchToProps)(Dashboard);

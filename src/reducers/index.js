@@ -1,12 +1,14 @@
-import {combineReducers} from "redux";
+import { combineReducers } from "redux";
 
-import mainReducer from "./MainReducer";
-import BooksReducer from "./BooksReducer";
+import BookReducer from "./BookReducer";
+import BooksJSON from "./BooksJSON";
 import NewsReducer from "./NewsReducer";
+import Employees from "./EmployeeReducer";
 
- const rootReducer = combineReducers({
-    selectedBook:mainReducer,
-    books : BooksReducer,
-    news: NewsReducer
-})
+const rootReducer = combineReducers({
+  selectedBook: BookReducer,
+  books: BooksJSON,
+  news: NewsReducer,
+  employees: Employees
+});
 export default rootReducer;

@@ -1,5 +1,5 @@
 nav.navbar, .navbar-default {
-  background-color: #2892D7 !important;
+  background-color: #22252e !important;
 }
 
 .navbar-default {
@@ -36,4 +36,9 @@ nav.navbar, .navbar-default {
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
   color: white;
   background-color: transparent;
+}
+
+.logo-Image{
+  width: 200px;
+  margin-top: -16px;
 }

@@ -1,10 +1,11 @@
 import React,{Component} from "react";
+import "./Tutorial.css";
 
 class Tutorial extends Component{
     constructor(props) {
         super(props);
         
-        this.state = {
+        this.state = { 
            data: 0
         }
         this.setNewNumber = this.setNewNumber.bind(this)
@@ -14,40 +15,16 @@ class Tutorial extends Component{
      }
      render() {
         return (
-           <div>
-              <button onClick = {this.setNewNumber}>INCREMENT</button>
-              <Content myNumber = {this.state.data}></Content>
-           </div>
-        );
-     }
-  }
-  class Content extends React.Component {
-     componentWillMount() {
-        console.log('Component WILL MOUNT!')
-     }
-     componentDidMount() {
-        console.log('Component DID MOUNT!')
-     }
-     componentWillReceiveProps(newProps) {    
-        console.log('Component WILL RECIEVE PROPS!')
-     }
-     shouldComponentUpdate(newProps, newState) {
-        return true;
-     }
-     componentWillUpdate(nextProps, nextState) {
-        console.log('Component WILL UPDATE!');
-     }
-     componentDidUpdate(prevProps, prevState) {
-        console.log('Component DID UPDATE!')
-     }
-     componentWillUnmount() {
-        console.log('Component WILL UNMOUNT!')
-     }
-     render() {
-        return (
-           <div>
-              <h3>{this.props.myNumber}</h3>
-           </div>
+          <div
+            className="col-lg-3 col-md-5 col-sm-8"
+            style={{ backgroundColor: "#FFF", paddingBottom: "10px" }}
+          >
+              <div className="tutorial-div">
+              <p>sjkjhaksjdhas</p>
+              <p>sjkjhaksjdhas</p>
+                 <p>sjkjhaksjdhas</p>
+            </div>
+          </div>
         );
      }
   }

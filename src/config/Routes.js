@@ -9,7 +9,7 @@ import Tutorial from "../container/Tutorial";
 import MyWork from "../container/MyWork";
 import LatestNews from "../container/NewsPaper"; 
 import Footer from "../container/Footer";
-
+import ReactCrudOperation from "../container/React-CRUD"
 const PageNotFound =()=>(<div><p>404 PageNotFound</p></div>)
 
 class Routes extends Component {
@@ -26,9 +26,10 @@ class Routes extends Component {
           <Route path="/tutorial" exact component={Tutorial} />
           <Route path="/latestNews" exact component={LatestNews} />
           <Route path="/contactme" exact component={ContactMe} />
+          <Route path="/reactcrud" exact component={ReactCrudOperation} />
           <Route component={PageNotFound} />
           </Switch>
-          <Footer/>
+         {/* <Footer/> */}
         </div>
       </Router>
     );

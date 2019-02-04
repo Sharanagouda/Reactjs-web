@@ -24,8 +24,9 @@ class MyBlog extends Component {
     console.log(employees);
     return (
       <div>
-        <p>This is a landing home page</p>
+        <p>This is a Work page</p>
         <ul>{this.renderList()}</ul>
+        <a href="/reactcrud" >React Crud Operation</a>
       </div>
     );
   }

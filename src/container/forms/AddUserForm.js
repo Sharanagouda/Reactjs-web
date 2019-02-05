@@ -37,13 +37,14 @@ class AddUserForm extends Component{
   render() {
     return (
       <form onSubmit={event=>{
-           event.preventDefault();
+      event.preventDefault();
      const { name,  contactno } = this.state
      const userData = {name, contactno};
      //alert(JSON.stringify(userData));
     // console.log(`A first name was submitted: ${name}. An age was submitted: ${contactno}`)
     if (!name || !contactno) return
      this.props.handleEditData(userData);
+     event.target.reset();
       }}>
         <label>
           Name:
@@ -51,7 +52,7 @@ class AddUserForm extends Component{
         </label>
         <label>
           Contact no:
-          <input type="text" ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
+          <input type="number" ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
         </label>
         <input type="submit" value="Submit" />
       </form>

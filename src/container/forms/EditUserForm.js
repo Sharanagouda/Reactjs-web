@@ -4,8 +4,8 @@ import "./EditUserForm.css";
 class EditUserForm extends Component{
     constructor(props){
         super(props);
-        console.log(this.props.usersData);
-        console.log(this.props.edit)
+        //console.log(this.props.usersData);
+        //console.log(this.props.edit)
         this.state={
                 id:this.props.usersData.id,
                 name:this.props.usersData.name,
@@ -49,11 +49,11 @@ class EditUserForm extends Component{
       <form onSubmit={event=>{
            event.preventDefault();
      const { id, name,  contactno } = this.state
-     const userData = {id, name, contactno};
+     const user = {id, name, contactno};
      //alert(JSON.stringify(userData));
         console.log(` ${id} A first name was submitted: ${name}. An age was submitted: ${contactno}`)
     if (!id || !name || !contactno) return
-     this.props.handleUpdateData(userData);
+     this.props.handleUpdateData({user, edit:false});
       }}>
         <label>
           Name:
@@ -61,9 +61,9 @@ class EditUserForm extends Component{
         </label>
         <label>
           Contact no:
-          <input type="text" value={this.state.contactno} ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
+          <input type="number" value={this.state.contactno} ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Update Details" />
       </form>
     );
   }

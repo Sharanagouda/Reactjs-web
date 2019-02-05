@@ -26,7 +26,6 @@ class ReactCrudOperation extends Component {
 
   //Create a new Data
   handleEditData = userDetails => {
-    const oldArray = this.state.usersData;
     const newArray = {
       id: this.state.usersData.length + 1,
       name: userDetails.name,
@@ -36,13 +35,13 @@ class ReactCrudOperation extends Component {
       usersData: [...this.state.usersData, newArray]
     });
     console.log(JSON.stringify(this.state.usersData));
+    
   };
 
   // Delete data
-  handleDeleteData = userId => {
-    console.log(userId);
-    this.setState({
-      usersData: this.state.usersData.filter((item, i) => i !== userId - 1)
+  handleDeleteData = index => {
+    this.setState( {
+      usersData: this.state.usersData.filter(i => i !== index)
     });
   };
 
@@ -50,30 +49,24 @@ class ReactCrudOperation extends Component {
   //https://www.taniarascia.com/crud-app-in-react-with-hooks/
     handleUpdateData = updatedData => {
     //console.log(updatedData.edit);
-    console.log(updatedData);
+    //console.log(updatedData);
         this.setState(prevState =>({
-      edit: updatedData.edit,
-            oldUserData: {...prevState.oldUserData,
+            edit: updatedData.edit,
+            oldUserData: {
                 id:updatedData.user.id,
-                 name:updatedData.user.name,
-                 contactno:updatedData.user.contactno}
+                name:updatedData.user.name,
+                contactno:updatedData.user.contactno}
     }));
-    console.log(this.state.oldUserData,"oldUserdata")
-    const oldArray = this.state.usersData;
-    // const newArray = oldArray.findIndex((obj=> obj.id == updatedData.user.id));
-    // console.log(oldArray[newArray]);
-    // oldArray[newArray].name=updatedData.user.name;
-    // console.log(oldArray[newArray],"h");
-    // const updatedArray = {
-    //     id:this.state.usersData.length+1,
-    //     name:updatedData.name,
-    //     contactno:updatedData.contactno
-    // }
-    // this.setState({
-    //     usersData:[...this.state.usersData, updatedArray]
-    // })
-  };
 
+    const newArray = this.state.usersData;
+    newArray[updatedData.user.id-1] = updatedData.user
+      this.setState({
+        usersData : newArray
+      })
+      console.log(this.state.usersData);
+    };
+
+    
   render() {
     return (
       <div className="container">

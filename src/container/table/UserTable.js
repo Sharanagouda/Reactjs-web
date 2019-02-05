@@ -21,12 +21,12 @@ class UserTable extends Component{
                 <tbody>
                 {user.length>0?(
                     user.map(user=>(
-                        <tr key={user.id}>
+                        <tr key={user.id} index={user.id}>
                         <td>{user.name}</td>
                         <td>{user.contactno}</td>
                         <td>
                             <button onClick={()=>this.props.handleUpdateData({user,edit:true})} className="button muted-button">Edit</button>
-                            <button onClick={()=>this.props.handleDeleteData(user.id)} className="button muted-button">Delete</button>
+                            <button onClick={()=>this.props.handleDeleteData(user)} className="button muted-button">Delete</button>
                         </td>
                     </tr>
                     ))

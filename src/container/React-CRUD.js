@@ -48,15 +48,13 @@ class ReactCrudOperation extends Component {
   //Update Data
   //https://www.taniarascia.com/crud-app-in-react-with-hooks/
     handleUpdateData = updatedData => {
-    //console.log(updatedData.edit);
-    //console.log(updatedData);
-        this.setState(prevState =>({
+        this.setState({
             edit: updatedData.edit,
             oldUserData: {
                 id:updatedData.user.id,
                 name:updatedData.user.name,
                 contactno:updatedData.user.contactno}
-    }));
+    });
 
     const newArray = this.state.usersData;
     newArray[updatedData.user.id-1] = updatedData.user

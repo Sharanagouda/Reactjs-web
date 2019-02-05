@@ -5,7 +5,16 @@ class UserTable extends Component{
         super(props);
 
     }
-
+// so default is this style:
+editBtnStyle = {
+    backgroundColor: '#008CBA',
+    color:'white'
+}
+// so default is this style:
+deleteBtnStyle = {
+    backgroundColor: '#f44336',
+    color:'white'
+}
     render(){
         const {user} = this.props;
 
@@ -25,8 +34,9 @@ class UserTable extends Component{
                         <td>{user.name}</td>
                         <td>{user.contactno}</td>
                         <td>
-                            <button onClick={()=>this.props.handleUpdateData({user,edit:true})} className="button muted-button">Edit</button>
-                            <button onClick={()=>this.props.handleDeleteData(user)} className="button muted-button">Delete</button>
+                            <button onClick={()=>this.props.handleUpdateData({user,edit:true})}   style={this.editBtnStyle} className="button muted-button">Edit</button>
+                            &nbsp;&nbsp;&nbsp; 
+                            <button onClick={()=>this.props.handleDeleteData(user)}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
                         </td>
                     </tr>
                     ))

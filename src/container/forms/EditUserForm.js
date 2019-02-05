@@ -4,8 +4,6 @@ import "./EditUserForm.css";
 class EditUserForm extends Component{
     constructor(props){
         super(props);
-        //console.log(this.props.usersData);
-        //console.log(this.props.edit)
         this.state={
                 id:this.props.usersData.id,
                 name:this.props.usersData.name,
@@ -13,7 +11,6 @@ class EditUserForm extends Component{
         }
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleContactNoChange = this.handleContactNoChange.bind(this);
-       // this.handleUpdateData = this.handleUpdateData.bind(this);
        
     }
 
@@ -26,32 +23,14 @@ class EditUserForm extends Component{
       const contactno = event.target.value
     this.setState({ contactno: contactno })
   }
-//Update Data
-        // handleUpdateData = (updatedData) => {
-        //     console.log(updatedData.edit)
-        //     console.log(updatedData.user)
-        //     this.setState({
-        //         edit:updatedData.edit
-        //     })
-            // const oldArray = this.state.usersData;
-            // const updatedArray = {
-            //     id:this.state.usersData.length+1,
-            //     name:updatedData.name,
-            //     contactno:updatedData.contactno
-            // }
-            // this.setState({
-            //     usersData:[...this.state.usersData, updatedArray]
-            // })
-    //    }
 
   render() {
     return (
       <form onSubmit={event=>{
-           event.preventDefault();
+      event.preventDefault();
      const { id, name,  contactno } = this.state
      const user = {id, name, contactno};
-     //alert(JSON.stringify(userData));
-        console.log(` ${id} A first name was submitted: ${name}. An age was submitted: ${contactno}`)
+    console.log(` ${id} A first name was submitted: ${name}. An age was submitted: ${contactno}`)
     if (!id || !name || !contactno) return
      this.props.handleUpdateData({user, edit:false});
       }}>

@@ -38,7 +38,7 @@ class AddUserForm extends Component{
         </label>
         <label>
           Contact no:
-          <input type="number" ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
+          <input type="number" pattern="[0-9]*" ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
         </label>
         <input type="submit" value="Submit" />
       </form>

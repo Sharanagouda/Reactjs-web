@@ -40,7 +40,7 @@ class EditUserForm extends Component{
         </label>
         <label>
           Contact no:
-          <input type="number" value={this.state.contactno} ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
+          <input type="number" pattern="[0-9]*" value={this.state.contactno} ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
         </label>
         <input type="submit" value="Update Details" />
       </form>

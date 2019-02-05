@@ -1,0 +1,9 @@
+.flex-topic{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0F7FF;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    height: 100px;
+}

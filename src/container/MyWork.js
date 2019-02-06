@@ -8,9 +8,10 @@ class MyBlog extends Component {
     super(props);
     this.state = {
       usersData: [
-        { id: 1, topic: "React CURD Application", date: "05/02/2019", linktoScreen:"/reactcrud"},
-        { id: 2, topic: "React-Redux CURD Application", date: "10/02/2019", linktoScreen:"/reactcrud"},
-        { id: 3, topic: "Weather API Integration", data: "12/02/2019", linktoScreen:"/reactcrud"}
+        { id: 1, topic: "React CURD Application", date: "05/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
+        { id: 2, topic: "React-Redux CURD Application", date: "10/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
+        { id: 3, topic: "Weather API Integration", data: "12/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
+        { id: 4, topic: "My Portfolio", data: "12/02/2019", linktoScreen:"https://sharanagouda.github.io/",demoImage:"assets/curdWebApp.png"},
       ],
     };
     this.handleEditData = this.handleEditData.bind(this);

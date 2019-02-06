@@ -1,5 +1,5 @@
 import React from "react";
-import Channel from "../container/Channels";
+import Channel from "../container/channels/Channels";
 const ChannelField = ()=>(
     <div className="row">
     <Channel channelName="Google News (India)" channelString="google-news-in" channelLogo="assets/google.png"/>

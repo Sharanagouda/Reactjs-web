@@ -17,13 +17,16 @@ class Tutorial extends Component{
         return (
           <div
             className="col-lg-3 col-md-5 col-sm-8"
-            style={{ backgroundColor: "#FFF", paddingBottom: "10px" }}
-          >
+            style={{ backgroundColor: "#FFF", paddingBottom: "10px" }}>
               <div className="tutorial-div">
-              <p>sjkjhaksjdhas</p>
-              <p>sjkjhaksjdhas</p>
-                 <p>sjkjhaksjdhas</p>
-            </div>
+              <button>CODE</button>
+              <pre>
+                <code>
+                <p> **Enter a code snippet demoing a function here** </p>
+               </code>
+              
+             </pre>
+          </div>
           </div>
         );
      }

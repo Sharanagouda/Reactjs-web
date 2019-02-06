@@ -2,6 +2,7 @@ import {
   SELECT_BOOK,
   SELECT_CHANNEL,
   RECEIVE_POST,
+  DEFAULT_NEWS,
   REQUEST_CHANNEL,
   ADD_BOOK,
   EDIT_BOOK,
@@ -25,19 +26,20 @@ export const requestPosts = () => ({
   type: REQUEST_CHANNEL
 });
 
-export function receivedPosts(json) {
+export function receivedPosts(name,json) {
   return {
     type: RECEIVE_POST,
-    payload: json.articles
+    payload: json.articles,
+    channelName:name
   };
 }
 
-export function fetchPost(channel) {
+export function fetchPost(channelName,channelString) {
   return dispatch => {
     dispatch(requestPosts());
     return (
       fetch(
-        `https://newsapi.org/v2/top-headlines?sources=${channel}&apiKey=${MY_API_KEY}`,
+        `https://newsapi.org/v2/top-headlines?sources=${channelString}&apiKey=${MY_API_KEY}`,
         {
           method: "GET"
         }
@@ -46,7 +48,35 @@ export function fetchPost(channel) {
           return result.json();
         })
         .then(jsonResult => {
-          dispatch(receivedPosts(jsonResult));
+          
+          dispatch(receivedPosts(channelName,jsonResult));
+        }),
+      error => console.log(error)
+    );
+  };
+}
+
+export function defaultReceivedPosts(json) {
+  return {
+    type: DEFAULT_NEWS,
+    payload: json.articles
+  };
+}
+export function defaultNews() {
+  const channelNew = "country=in"
+  return dispatch => {
+    return (
+      fetch(
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${MY_API_KEY}`,
+        {
+          method: "GET"
+        }
+      )
+        .then(result => {
+          return result.json();
+        })
+        .then(jsonResult => {
+          dispatch(defaultReceivedPosts(jsonResult));
         }),
       error => console.log(error)
     );

@@ -77,11 +77,11 @@ class NewsPaper extends Component{
                 <div  style={{ backgroundColor:"#F3F3F3" }}>
                 {this.props.news.map((item,i)=>{
                     return(
-                    <div key={i} className="col-lg-3 col-md-5 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px" }}>
+                    <div key={i} className="col-lg-3 col-md-4 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px" }}>
                     <div className="card-div">
-                    <CardTitle title={item.title}/>
-                    <CardHeader category={item.source.id} image={item.urlToImage}/>
-                    <CardBody content={item.content} description={item.description} publishedAt={item.publishedAt} url={item.url}/>
+                     <CardTitle title={item.title}/>
+                     <CardHeader category={item.source.id} image={item.urlToImage}/>
+                     <CardBody content={item.content} description={item.description} publishedAt={item.publishedAt} url={item.url}/>
                     </div>
                    </div>
                   
@@ -105,7 +105,7 @@ class NewsPaper extends Component{
     render(){
     
         const {news} =this.props;
-        console.log(news)
+        //console.log(news)
         return(
             <div className="newsPaper-main-div">
                 <NewsAppDashboard/>

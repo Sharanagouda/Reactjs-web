@@ -8,6 +8,7 @@ export const UPDATE_BOOK = "UPDATE_BOOK";
 export const SELECT_CHANNEL = "SELECT_CHANNEL";
 export const REQUEST_CHANNEL = "REQUEST_CHANNEL";
 export const RECEIVE_POST = "RECEIVE_POST";
+export const DEFAULT_NEWS = "DEFAULT_NEWS";
 
 export const GET_EMPLOYEE = "GET_EMPLOYEE";
 export const UPDATE_EMPLOYEE = "UPDATE_EMPLOYEE";

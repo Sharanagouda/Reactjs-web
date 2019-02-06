@@ -28,7 +28,7 @@ render(){
     //const {newsName} =this.props;
     //console.log(newsName)
     return(
-        <div onClick={()=>{this.props.onClick(this.props.channelName,this.props.channelString)}} className="col-lg-2 col-md-4 col-sm-6">
+        <div onClick={()=>{this.props.onClick(this.props.channelName,this.props.channelString)}} className="col-md-3 col-sm-6">
         <div className="channel-mainDiv">
             <Image src={this.props.channelLogo} className="channelLogo" rounded />
             <p className="channelName">{this.props.channelName}</p>

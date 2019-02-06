@@ -7,62 +7,8 @@ import NewsItem from "../components/NewsItem";
 import { Link } from 'react-router-dom';
 import { Card, Container,Row,Col,Image } from 'react-bootstrap';
 import "./NewsPaper.css"
+import CardItem from "./../components/card/Card"
 
-
-
-class Button extends React.Component {
-    render() {
-        const {url} =this.props;
-      return (
-        <a href={url}  style={{color:"blue", fontSize:15,}}>Read more</a>
-       
-      )
-    }
-  }
-  class CardTitle extends React.Component {
-    render() {
-      
-      var style = { 
-          padding:"10px",
-
-      };
-      return (
-        <header style={style} className="card-header-for-title">
-          <h5 className="card-header--title">{this.props.title}</h5>
-        </header>
-      )
-    }
-  }
-class CardHeader extends React.Component {
-    render() {
-      const { image, category } = this.props;
-      var style = { 
-          backgroundImage: 'url(' + image + ')',
-          height:"200px",
-        margintop:"-10px"
-      };
-      return (
-        <header style={style} className="card-header">
-          <h4 className="card-header-category">{category}</h4>
-        </header>
-      )
-    }
-  }
-class CardBody extends Component {
-    render() {
-        const { description, content, publishedAt,url } = this.props;
-        var str=publishedAt;
-        var publishedOn = str.slice(0, 10);
-      return (
-        <div className="card-body">
-          <p className="date" >Published On: {publishedOn}</p>
-          <p className="card-description">{description}</p>
-          <p className="body-content">{content}</p>
-          <Button url={url}/>
-        </div>
-      )
-    }
-  }
 class NewsPaper extends Component{
  constructor(props){
      super(props);
@@ -77,11 +23,9 @@ class NewsPaper extends Component{
                 <div  style={{ backgroundColor:"#F3F3F3" }}>
                 {this.props.news.map((item,i)=>{
                     return(
-                    <div key={i} className="col-lg-3 col-md-4 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px" }}>
+                    <div key={i} className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px" }}>
                     <div className="card-div">
-                     <CardTitle title={item.title}/>
-                     <CardHeader category={item.source.id} image={item.urlToImage}/>
-                     <CardBody content={item.content} description={item.description} publishedAt={item.publishedAt} url={item.url}/>
+                        <CardItem  title={item.title} category={item.source.id} image={item.urlToImage} content={item.content} description={item.description} publishedAt={item.publishedAt} url={item.url}/>
                     </div>
                    </div>
                   

@@ -11,6 +11,12 @@ export const REQUEST_CHANNEL = "REQUEST_CHANNEL";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const DEFAULT_NEWS = "DEFAULT_NEWS";
 
+//redux curd operation
+export const ADD_POST = "ADD_POST";
+export const DELETE_POST = "DELETE_POST";
+export const UPDATE_POST = "UPDATE_POST";
+export const GET_POST = "GET_POST";
+
 //for employee database
 export const GET_EMPLOYEE = "GET_EMPLOYEE";
 export const UPDATE_EMPLOYEE = "UPDATE_EMPLOYEE";

@@ -12,7 +12,11 @@ import {
   GET_EMPLOYEE,
   EDIT_EMPLOYEE,
   UPDATE_EMPLOYEE,
-  DELETE_EMPLOYEE
+  DELETE_EMPLOYEE,
+  ADD_POST,
+  GET_POST,
+  UPDATE_POST,
+  DELETE_POST
 } from "../actionType";
 
 const MY_API_KEY = "794fb53245dd45b0b2564f86257a2983";
@@ -82,7 +86,7 @@ export function defaultNews() {
     );
   };
 }
-
+//==========================================================================//
 export function receivedEmpolyee(json) {
   return {
     type: GET_EMPLOYEE,
@@ -161,4 +165,32 @@ export function updateBook(book) {
     payload: book
   };
   //console.log("a book has been selected", book.title)
+}
+//-------------------------------------------------------------------------//
+//react redux basic tutorial
+
+export function postNewData(data){
+ 
+  return{
+    type:ADD_POST,
+    postDataPayload:data
+  }
+}
+
+export function deleteSelectedPost(postId){
+  console.log(postId);
+  return{
+    type:DELETE_POST,
+    id:postId
+  }
+}
+
+export function editAndUpdatePost(postId, postData){
+  console.log(postId, postData);
+
+  return{
+    type:UPDATE_POST,
+    id:postId,
+    data:postData
+  }
 }

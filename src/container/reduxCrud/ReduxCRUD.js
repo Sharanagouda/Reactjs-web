@@ -4,6 +4,8 @@ import { selectBook, getALLEmployee } from "../../action";
 import { bindActionCreators } from "redux";
 import "./ReduxCRUD.css";
 import PostForm from "./postForm/PostForm";
+import PostCard from "./postCard/PostCard";
+import EditForm from "./editForm/EditForm";
 
 
 class ReduxCrudOperation extends Component {
@@ -16,21 +18,29 @@ class ReduxCrudOperation extends Component {
   }
     
   render() {
-   
+      const {posts} =this.props;
+
+   console.log(posts);
     return (
       <div className="container">
         <h1 className="redux-title">Redux Basic CRUD Application</h1>
-       <PostForm/>
+        <PostForm/>
+        {this.props.posts.map((item) => (
+            <div key={item.id}>
+                {item.editing ? <EditForm post={item} key={item.id} /> :
+                    <PostCard key={item.id} post={item} />}
+            </div>
+        ))}
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-   
-  };
-}
+const mapStateToProps=(state)=> ({
+  
+   posts:state.posts
+  
+})
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(

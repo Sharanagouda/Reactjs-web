@@ -6,6 +6,7 @@ class UserTable extends Component{
         super(props);
 
     }
+    //https://codeburst.io/redux-a-crud-example-abb834d763c9
 // so default is this style:
 editBtnStyle = {
     backgroundColor: '#008CBA',

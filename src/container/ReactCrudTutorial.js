@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {selectBook,getALLEmployee} from "../action";
 import {bindActionCreators} from "redux";
-import BookDetatils from "./bookDetails";
-import AddNewBook from "./addNewBook";
 
-class LandingPage extends Component {
+class ReactCrudTutorial extends Component {
 
   componentDidMount(){
     this.props.getALLEmployee();
@@ -26,8 +24,6 @@ class LandingPage extends Component {
       <div>
         <p>This is a landing home page</p>
         <ul >{this.renderList()}</ul>
-        <BookDetatils/>
-        <AddNewBook/>
       </div>
     );
   }
@@ -49,4 +45,4 @@ function mapDispatchToProps(dispatch){
   },dispatch);
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(LandingPage);
+export default connect(mapStateToProps,mapDispatchToProps)(ReactCrudTutorial);

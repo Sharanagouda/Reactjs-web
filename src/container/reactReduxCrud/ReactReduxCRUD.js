@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { connect } from "react-redux";
-import { selectBook, getALLEmployee } from "./../../action";
+import { selectBook, getALLEmployee } from "../../action";
 import { bindActionCreators } from "redux";
 import "./ReactReduxCRUD.css";
 
@@ -10,9 +10,13 @@ class ReactReduxCrudOperation extends Component {
     this.state = {
         todos: ['a','b','c','d','e','f','g','h','i','j','k'],
         currentPage: 1,
-        todosPerPage: 3
+        todosPerPage: 3,
+        employeeData:this.props.employees
     };
     this.handleClick = this.handleClick.bind(this);
+  }
+  componentDidMount=()=>{
+    this.props.getALLEmployee();
   }
   handleClick(event) {
     this.setState({
@@ -23,7 +27,8 @@ class ReactReduxCrudOperation extends Component {
     
   render() {
     const { employees } = this.props;
-    console.log(employees);
+    console.log(this.props.employees)
+
     const { todos, currentPage, todosPerPage } = this.state;
 
         // Logic for displaying current todos
@@ -56,11 +61,45 @@ class ReactReduxCrudOperation extends Component {
       <div className="container">
         <h1 className="redux-title">CRUD Application Using Redux</h1>
         <div>
+        <div>
+        <table>
+        <thead>
+            <tr>
+                <th>Emp Id</th>
+                <th>Emp name</th>
+                <th>Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+        {employees>0?(
+          employees.map(user=>(
+              <tr key={user.id} index={user.id}>
+              <td>{user.employee_name}</td>
+              <td>{user.id}</td>
+              <td>
+                  <button onClick={()=>this.props.handleUpdateData({user,edit:true})}   style={this.editBtnStyle} className="button muted-button">Edit</button>
+                  &nbsp;&nbsp;&nbsp; 
+                  <button onClick={()=>this.props.handleDeleteData(user)}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
+              </td>
+          </tr>
+          ))
+      ) : (
+          <tr>
+              <td>No Users found</td>
+          </tr>
+      )
+
+      }
+           
+        </tbody>
+    </table>
+        </div>
         <ul>
           {renderTodos}
         </ul>
         <ul id="page-numbers">
           {renderPageNumbers}
+        
         </ul>
       </div>
       </div>

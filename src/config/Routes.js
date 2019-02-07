@@ -12,8 +12,11 @@ import Footer from "../container/footer/Footer";
 import ReactCrudOperation from "../container/reactCrud/React-CRUD";
 import ReactReduxCrudOperation from "../container/reactReduxCrud/ReactReduxCRUD";
 import Dashboard from "../container/Dashboard.js";
+import ReactCrudTutorial from "../container/ReactCrudTutorial";
+import ReduxCrudOperation from "../container/reduxCrud/ReduxCRUD";
 
-const PageNotFound =()=>(<div><p>404 PageNotFound</p></div>)
+
+
 
 class Routes extends Component {
   render() {
@@ -32,6 +35,8 @@ class Routes extends Component {
           <Route path="/reactcrud" exact component={ReactCrudOperation} />
           <Route path="/reactReduxCrud" exact component={ReactReduxCrudOperation}/>
           <Route path="/dashboard" exact component={Dashboard}/>
+          <Route path="/reactcurdTutorial" exact component={ReactCrudTutorial}/>
+          <Route path="/reduxCrudOperation" exact component={ReduxCrudOperation} />
           <Route component={PageNotFound} />
           </Switch>
          {/* <Footer/> */}
@@ -40,5 +45,7 @@ class Routes extends Component {
     );
   }
 }
+
+const PageNotFound =()=>(<div><p>404 PageNotFound</p></div>)
 
 export default Routes;

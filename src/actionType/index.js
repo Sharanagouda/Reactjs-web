@@ -5,11 +5,13 @@ export const EDIT_BOOK = "EDIT_BOOK";
 export const DELETE_BOOK = "DELETE_BOOK";
 export const UPDATE_BOOK = "UPDATE_BOOK";
 
+//for Daily news papaer
 export const SELECT_CHANNEL = "SELECT_CHANNEL";
 export const REQUEST_CHANNEL = "REQUEST_CHANNEL";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const DEFAULT_NEWS = "DEFAULT_NEWS";
 
+//for employee database
 export const GET_EMPLOYEE = "GET_EMPLOYEE";
 export const UPDATE_EMPLOYEE = "UPDATE_EMPLOYEE";
 export const DELETE_EMPLOYEE = "DELETE_EMPLOYEE";

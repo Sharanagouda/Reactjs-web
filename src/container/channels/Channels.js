@@ -25,14 +25,19 @@ componentDidMount() {
  }
 
 render(){
-    //const {newsName} =this.props;
-    //console.log(newsName)
+    const {selectedchannel} =this.props;
+    console.log(selectedchannel)
+
     return(
         <div onClick={()=>{this.props.onClick(this.props.channelName,this.props.channelString)}} className="col-md-3 col-sm-6">
-        <div className="channel-mainDiv">
+        {(this.props.selectedchannel == this.props.channelName)? ( <div className="selectedChannel-mainDiv">
+        <Image src={this.props.channelLogo} className="channelLogo" rounded />
+        <p className="channelName">{this.props.channelName}</p>
+        </div>):( <div className="channel-mainDiv">
             <Image src={this.props.channelLogo} className="channelLogo" rounded />
             <p className="channelName">{this.props.channelName}</p>
-        </div>
+        </div> )}
+       
     </div>
     )
 }
@@ -40,6 +45,7 @@ render(){
 
 const mapStateToProps = (state)=> ({
     active:state.channel,
+    selectedchannel:state.news.channelName
 })
 const mapDispatchToProps =(dispatch)=>({
     onClick:(channelString) => dispatch( getChannel(channelString)),

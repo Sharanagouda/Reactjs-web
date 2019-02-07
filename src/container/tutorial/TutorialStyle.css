@@ -1,0 +1,44 @@
+.tutorial-div {
+  padding: 5;
+  background-color: azure;
+  box-shadow:  1px 1px #338833;
+  border-radius: 1px;
+}
+.tutorial-topic{
+  justify-content: center;
+  align-items: center;
+  background-color:#696969;
+  margin-right: 45px;
+  margin-bottom: 20px;
+  padding: 1%;
+  border-radius: 15px;
+}
+.list-view{
+  display: flex;
+  flex-direction: row;
+  flex: 100%;
+ 
+}
+
+.topic-ImageDiv{
+  flex: 20%;
+  display: flex;
+  border-radius: 10px;
+}
+.topic-content{
+}
+.topic-Image{
+  width:25%;
+  height: 100%;;
+  margin: 0 1em 1em 0;
+  border-radius: 10px;
+}
+
+.topic-name{
+  color: white;
+  font-size: 22px
+}
+.posted-date{
+  color: white;
+  font-size: 16px
+}

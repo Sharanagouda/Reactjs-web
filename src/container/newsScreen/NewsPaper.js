@@ -1,13 +1,13 @@
 import React,{Component} from "react";
-import ChannelField from "../components/ChannelField";
-import TopNews from "../components/NewsItem";
+import ChannelField from "../../components/ChannelField";
+import TopNews from "../../components/NewsItem";
 import {connect} from "react-redux";
-import NewsAppDashboard from "./NewsAppDashboard";
-import NewsItem from "../components/NewsItem";
+import NewsAppDashboard from "./../newsDashboard/NewsAppDashboard";
+import NewsItem from "../../components/NewsItem";
 import { Link } from 'react-router-dom';
 import { Card, Container,Row,Col,Image } from 'react-bootstrap';
 import "./NewsPaper.css"
-import CardItem from "./../components/card/Card"
+import CardItem from "../../components/card/Card"
 
 class NewsPaper extends Component{
  constructor(props){
@@ -48,8 +48,7 @@ class NewsPaper extends Component{
 
     render(){
     
-        const {news} =this.props;
-        //console.log(news)
+        const {news,newschannel} =this.props;
         return(
             <div className="newsPaper-main-div">
                 <NewsAppDashboard/>
@@ -61,7 +60,8 @@ class NewsPaper extends Component{
 }
 
 const mapStateToProps = (state)=> ({
-    news:state.news.payload
+    news:state.news.payload,
+    newschannel:state.news.channelName
 })
 const mapDispatchToProps =(dispatch)=>({
 

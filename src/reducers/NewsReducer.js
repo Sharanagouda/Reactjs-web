@@ -10,13 +10,13 @@ const newsReducer = (state = {}, action) => {
     case REQUEST_CHANNEL:
       return {
         ...state,
-        loading: true
+        loading: true,
+        channelName: action.channelName
       };
     case RECEIVE_POST:
       return {
         ...state,
         payload: action.payload,
-        channelName:action.channelName,
         loading: false
       };
     case DEFAULT_NEWS:

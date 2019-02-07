@@ -1,11 +1,11 @@
 import React, { Component, useState } from "react";
 import { connect } from "react-redux";
-import { selectBook, getALLEmployee } from "./../action";
+import { selectBook, getALLEmployee } from "./../../action";
 import { bindActionCreators } from "redux";
 import "./React-CRUD.css";
-import UserTable from "./table/UserTable";
-import AddUserForm from "./forms/AddUserForm";
-import EditUserForm from "./forms/EditUserForm";
+import UserTable from "./../table/UserTable";
+import AddUserForm from "./../forms/AddUserForm";
+import EditUserForm from "./../forms/EditUserForm";
 
 class ReactCrudOperation extends Component {
   constructor(props) {

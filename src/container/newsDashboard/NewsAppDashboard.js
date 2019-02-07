@@ -1,7 +1,7 @@
 import React,{Component} from "react";
-import ChannelField from "../components/ChannelField";
-import Button from "../components/Button";
-import TopNews from "../components/NewsItem";
+import ChannelField from "../../components/ChannelField";
+import Button from "../../components/Button";
+import TopNews from "../../components/NewsItem";
 import {connect} from "react-redux";
 import "./NewsAppDashboard.css";
 

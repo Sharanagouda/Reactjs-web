@@ -22,21 +22,21 @@ export const getChannel = channel => ({
   channel
 });
 
-export const requestPosts = () => ({
-  type: REQUEST_CHANNEL
+export const requestPosts = (channelName) => ({
+  type: REQUEST_CHANNEL,
+  channelName:channelName
 });
 
-export function receivedPosts(name,json) {
+export function receivedPosts(json) {
   return {
     type: RECEIVE_POST,
     payload: json.articles,
-    channelName:name
   };
 }
 
 export function fetchPost(channelName,channelString) {
   return dispatch => {
-    dispatch(requestPosts());
+    dispatch(requestPosts(channelName));
     return (
       fetch(
         `https://newsapi.org/v2/top-headlines?sources=${channelString}&apiKey=${MY_API_KEY}`,
@@ -49,7 +49,7 @@ export function fetchPost(channelName,channelString) {
         })
         .then(jsonResult => {
           
-          dispatch(receivedPosts(channelName,jsonResult));
+          dispatch(receivedPosts(jsonResult));
         }),
       error => console.log(error)
     );
@@ -127,6 +127,7 @@ export function fetchPostsError() {
 // }
 
 export function selectBook(book) {
+  console.log(book);
   return {
     type: SELECT_BOOK,
     payload: book

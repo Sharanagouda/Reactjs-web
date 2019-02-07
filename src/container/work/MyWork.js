@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { selectBook, getALLEmployee } from "./../action";
+import { selectBook, getALLEmployee } from "../../action";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";

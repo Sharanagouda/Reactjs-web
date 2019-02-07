@@ -5,6 +5,7 @@
     margin-right: 45px;
     margin-bottom: 20px;
     padding: 1%;
+    border-radius: 15px;
 }
 .list-view{
     display: flex;

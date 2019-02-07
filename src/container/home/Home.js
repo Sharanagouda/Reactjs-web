@@ -7,16 +7,14 @@ export default class Home extends Component {
     render() {
         return <div>
             <Jumbotron>
-                <h2>Welcome to myWebsite</h2>
-                <p>
-                    This is how to build a website with React, React-Router &
-                    React-Bootstrap
-          </p>
-                <Link to="/about">
-                    <Button bsStyle="primary">Learn More</Button>
-                </Link>
+            <div >
+            <h2 style={{textAlign:"center"}}>Welcome to myWebsite </h2>
+            <p style={{textAlign:"center"}}>This is how to build a website with React, React-Router &  React-Bootstrap</p>
+            
+            </div>
+               
             </Jumbotron>
-            <Row className="show-grid text-center">
+          {/*  <Row className="show-grid text-center">
                 <Col xs={12} sm={4} className="person-wrapper">
                     <Image src="assets/sharan.jpeg" circle className="profile-pic" />
                     <h3>Sharan</h3>
@@ -44,7 +42,7 @@ export default class Home extends Component {
                         push them out.
             </p>
                 </Col>
-            </Row>
-        </div>;
+    </Row>*/}
+        </div>
     }
 }

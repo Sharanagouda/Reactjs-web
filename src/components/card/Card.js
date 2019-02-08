@@ -18,7 +18,7 @@ class Card extends Component {
           padding: "10px",
       }
     return (
-      <div>
+      <div className="news-card-main-div">
         <header style={styleForTitle} className="card-header-for-title">
             <h5 className="card-header--title">{this.props.title}</h5>
         </header>

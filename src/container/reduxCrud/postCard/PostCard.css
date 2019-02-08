@@ -1,0 +1,10 @@
+.new-post{
+    background-color: #2F4F4F;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.post-title{
+    color:white;
+    font-size: 20
+}

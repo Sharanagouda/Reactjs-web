@@ -24,13 +24,19 @@ class ReduxCrudOperation extends Component {
     return (
       <div className="container">
         <h1 className="redux-title">Redux Basic CRUD Application</h1>
+        <div className="flex-main-row">
+        <div className="flex-one">
         <PostForm/>
+        </div>
+        <div className="flex-two">
         {this.props.posts.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} >
                 {item.editing ? <EditForm post={item} key={item.id} /> :
                     <PostCard key={item.id} post={item} />}
             </div>
         ))}
+        </div>
+       </div>
       </div>
     );
   }

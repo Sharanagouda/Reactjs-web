@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {deleteSelectedPost,editAndUpdatePost} from "../../../action"
-//import "./PostCard.css";
+import "./PostCard.css";
 
 class Post extends Component {
 constructor(props){
@@ -32,9 +32,9 @@ editFunction(postId){
   render() {
       console.log(this.props.post.id);
   return (
-    <div>
-      <h2>{this.props.post.title}</h2>
-      <p>{this.props.post.message}</p>
+    <div className="new-post">
+      <p className="post-title">{this.props.post.title}</p>
+      <p className="post-title">{this.props.post.message}</p>
       <button onClick={()=>this.editFunction(this.props.post.id)}   style={this.editBtnStyle} className="button muted-button">Edit</button>
       &nbsp;&nbsp;&nbsp; 
       <button onClick={()=>this.deleteFunction(this.props.post.id)}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>

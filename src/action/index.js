@@ -16,7 +16,8 @@ import {
   ADD_POST,
   GET_POST,
   UPDATE_POST,
-  DELETE_POST
+  DELETE_POST,
+  EDIT_POST
 } from "../actionType";
 
 const MY_API_KEY = "794fb53245dd45b0b2564f86257a2983";
@@ -185,9 +186,15 @@ export function deleteSelectedPost(postId){
   }
 }
 
-export function editAndUpdatePost(postId, postData){
-  console.log(postId, postData);
+export function editAndUpdatePost(postId){
 
+  return{
+    type:EDIT_POST,
+    id:postId,
+  }
+}
+
+export function UpdatePost(postId, postData){
   return{
     type:UPDATE_POST,
     id:postId,

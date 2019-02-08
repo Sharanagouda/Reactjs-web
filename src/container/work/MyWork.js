@@ -12,7 +12,7 @@ class MyBlog extends Component {
     this.state = {
       usersData: [
         { id: 1, topic: "React CURD Application", postedDate: "05/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
-        { id: 2, topic: "React-Redux Bacic CURD Application", postedDate: "10/02/2019", linktoScreen:"/reduxCrudOperation",demoImage:"assets/curdWebApp.png"},
+        { id: 2, topic: "React-Redux Bacic CURD Application", postedDate: "08/02/2019", linktoScreen:"/reduxCrudOperation",demoImage:"assets/reduxbasicCrurd.png"},
         { id: 3, topic: "React-Redux CURD Application", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
         { id: 4, topic: "Weather API Integration", postedDate: "12/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
         { id: 5, topic: "My Portfolio", postedDate: "12/02/2019", linktoScreen:"https://sharanagouda.github.io/",demoImage:"assets/curdWebApp.png"},

@@ -3,7 +3,53 @@ import { Grid, Row, Col, Image } from 'react-bootstrap';
 import './News.css';
 
 export default class News extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        todos: ['a','b','c','d','e','f','g','h','i','j','k'],
+        currentPage: 1,
+        todosPerPage: 3,
+        employeeData:this.props.employees
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
+  }
+  
   render() {
+
+    const { todos, currentPage, todosPerPage } = this.state;
+
+        // Logic for displaying current todos
+        const indexOfLastTodo = currentPage * todosPerPage;
+        const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
+        const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
+
+        const renderTodos = currentTodos.map((todo, index) => {
+          return <li key={index}>{todo}</li>;
+        });
+
+        // Logic for displaying page numbers
+        const pageNumbers = [];
+        for (let i = 1; i <= Math.ceil(todos.length / todosPerPage); i++) {
+          pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+            return (
+              <li
+                key={number}
+                id={number}
+                onClick={this.handleClick}
+              >
+                {number}
+              </li>
+            );
+          });
     return (
       <div>
         <Image src="assets/mountain-man.jpg" className="header-image" />
@@ -22,7 +68,14 @@ export default class News extends Component {
               <p>I spend a lot of time walking around in the woods and talking to trees, and squirrels, and little rabbits and stuff. The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe. Just go out and talk to a tree. Make friends with it. I guess that would be considered a UFO. A big cotton ball in the sky. Tree trunks grow however makes them happy. In nature, dead trees are just as normal as live trees.</p>
             </Col>
           </Row>
+          <ul>
+          {renderTodos}
+        </ul>
+        <ul id="page-numbers">
+          {renderPageNumbers}
         
+        </ul>
+
       </div>
     )
   }

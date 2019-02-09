@@ -1,9 +1,12 @@
 .footer-main-div {
-    background-color: #22252e !important;
-    height: calc(10% - 60px);
-    position:absolute;
-left:0;
-bottom:0;
-right:0;
+    position: "fixed";
+    left: "0";
+    bottom: "0";
+    width: "100%";
+    background-color: "#004165";
+    color: "white";
+    text-align: "center";
+    padding : "10px"
   }
+  
   

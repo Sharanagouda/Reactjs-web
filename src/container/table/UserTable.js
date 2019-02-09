@@ -19,7 +19,7 @@ deleteBtnStyle = {
 }
     render(){
         const {user} = this.props;
-
+//console.log(user.length);
         return(
             <table>
                 <thead>

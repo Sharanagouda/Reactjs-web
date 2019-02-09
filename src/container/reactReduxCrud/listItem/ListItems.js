@@ -1,19 +1,29 @@
 import React, { Component, useState } from "react";
 import { connect } from "react-redux";
-import { getDataFromApi,  } from "../../../action";
+import { getALLEmployee,  } from "../../../action";
 import { bindActionCreators } from "redux";
 import "./ListItems.css";
 
-class TopNews extends Component {
+class ListItems extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        
+        //employeeDataBase:[],
+        currentPage: 1,
+        todosPerPage: 100,
+        employeeDataBase:this.props.userApiData
     };
-   
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+
+  handleClick(event) {
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
   }
   componentDidMount=()=>{
-    this.props.handleGetApiData();
+    this.props.handleGetEmployeeData();
   }
  
 
@@ -46,13 +56,14 @@ deleteBtnStyle = {
                 return(
                   <tr key={i} style={{ backgroundColor:"#FFF", paddingBottom:"10px" }}>
                   <td>{item.id}</td>
-                  <td>{item.name}</td>
-                        <td>{item.body}</td>
-                        <td>
-                            <button onClick={()=>this.props.handleUpdateData()}   style={this.editBtnStyle} className="button muted-button">Edit</button>
-                            &nbsp;&nbsp;&nbsp; 
-                            <button onClick={()=>this.props.handleDeleteData()}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
-                        </td>
+                  <td>{item.employee_name}</td>
+                  <td>{item.employee_age}</td>
+                  <td>{item.employee_salary}</td>
+                  <td>
+                      <button onClick={()=>this.props.handleUpdateData()}   style={this.editBtnStyle} className="button muted-button">Edit</button>
+                      &nbsp;&nbsp;&nbsp; 
+                      <button onClick={()=>this.props.handleDeleteData()}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
+                  </td>
                   </tr>
                   
                 )
@@ -65,17 +76,18 @@ deleteBtnStyle = {
     }else{
         return(
             <div className="no-news">
-                <p> Click on any news Channel</p>
+                <p> No datas found </p>
             </div>
         )
     }
     
   
 }
+
     
   render() {
-    //const { userApiData } = this.props;
-    //console.log(userApiData);
+    const { userApiData } = this.props;
+    
     return (
       <div className="list-container">
         {this.renderList()}
@@ -87,15 +99,16 @@ deleteBtnStyle = {
 
 const mapStateToProps = (state) => {
   return {
-      userApiData: state.apiData.payload
+      userApiData: state.employees.payload
+
   }
 }
 
 
 const mapDispatchToProps= (dispatch)=> ({
-  handleGetApiData : () =>dispatch(getDataFromApi())
+  handleGetEmployeeData : () =>dispatch(getALLEmployee())
 })
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TopNews);
+)(ListItems);

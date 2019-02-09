@@ -39,7 +39,7 @@ class Routes extends Component {
           <Route path="/reduxCrudOperation" exact component={ReduxCrudOperation} />
           <Route component={PageNotFound} />
           </Switch>
-         {/* <Footer/> */}
+         <Footer/> 
         </div>
       </Router>
     );

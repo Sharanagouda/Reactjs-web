@@ -1,4 +1,4 @@
-import { SELECT_CHANNEL,DEFAULT_NEWS, RECEIVE_POST, REQUEST_CHANNEL } from "./../actionType";
+import { SELECT_CHANNEL,DEFAULT_NEWS, RECEIVE_NEWS, REQUEST_CHANNEL } from "./../actionType";
 
 const newsReducer = (state = {}, action) => {
   switch (action.type) {
@@ -13,7 +13,7 @@ const newsReducer = (state = {}, action) => {
         loading: true,
         channelName: action.channelName
       };
-    case RECEIVE_POST:
+    case RECEIVE_NEWS:
       return {
         ...state,
         payload: action.payload,

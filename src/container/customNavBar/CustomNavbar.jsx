@@ -3,9 +3,10 @@ import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./CustomNavbar.css";
 
-export default class CustomNavbar extends Component {
+class CustomNavbar extends Component {
   render() {
     return (
+      <header style={header}>
       <Navbar default collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
@@ -64,6 +65,19 @@ export default class CustomNavbar extends Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      </header>
     );
   }
 }
+
+
+const header={
+
+  //position: "fixed",
+  left: "0",
+  top: "0",
+  width: "100%",
+  color: "white",
+
+}
+export default CustomNavbar;

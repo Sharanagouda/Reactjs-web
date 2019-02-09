@@ -26,7 +26,7 @@ componentDidMount() {
 
 render(){
     const {selectedchannel} =this.props;
-    console.log(selectedchannel)
+    //console.log(selectedchannel)
 
     return(
         <div onClick={()=>{this.props.onClick(this.props.channelName,this.props.channelString)}} className="col-md-3 col-sm-6">

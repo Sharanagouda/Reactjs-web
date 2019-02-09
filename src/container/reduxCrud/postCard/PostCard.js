@@ -30,15 +30,14 @@ editFunction(postId){
 }
 
   render() {
-      console.log(this.props.post.id);
+      const {post} = this.props;
   return (
     <div className="new-post">
-      <p className="post-title">{this.props.post.title}</p>
-      <p className="post-title">{this.props.post.message}</p>
-      <button onClick={()=>this.editFunction(this.props.post.id)}   style={this.editBtnStyle} className="button muted-button">Edit</button>
-      &nbsp;&nbsp;&nbsp; 
-      <button onClick={()=>this.deleteFunction(this.props.post.id)}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
- 
+        <p className="post-title">{post.title}</p>
+        <p className="post-title">{post.message}</p>
+        <button onClick={()=>this.editFunction(post.id)}   style={this.editBtnStyle} className="button muted-button">Edit</button>
+        &nbsp;&nbsp;&nbsp; 
+        <button onClick={()=>this.deleteFunction(post.id)}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
     </div>
   );
  }

@@ -1,15 +1,18 @@
-.redux-title{
-    color:#209ead;
+.container{
 }
-#page-numbers {
-    list-style: none;
-    display: flex;
-  }
-  
-  #page-numbers > li {
-    margin-right: 0.3em;
-    color: blue;
-    user-select: none;
-    cursor: pointer;
-  }
-  
+.flex-main-row{
+  display:flex;
+  flex-direction: 'row';
+   background-color: #E6E6FA;
+   border-radius: 15px;
+}
+.flex-one{
+  justify-content:"flex-start";
+
+}
+.flex-two{
+  justify-content:"flex-end";
+}
+.redux-title{
+  color:#209ead;
+}

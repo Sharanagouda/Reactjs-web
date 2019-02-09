@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { connect } from "react-redux";
-import { getALLEmployee,  } from "../../../action";
+import { getALLEmployee,deleteEmployeeData,upDateEmployeeData  } from "../../../action";
 import { bindActionCreators } from "redux";
 import "./ListItems.css";
 
@@ -60,9 +60,9 @@ deleteBtnStyle = {
                   <td>{item.employee_age}</td>
                   <td>{item.employee_salary}</td>
                   <td>
-                      <button onClick={()=>this.props.handleUpdateData()}   style={this.editBtnStyle} className="button muted-button">Edit</button>
+                      <button onClick={()=>this.props.handleUpdateData(item.id)}   style={this.editBtnStyle} className="button muted-button">Edit</button>
                       &nbsp;&nbsp;&nbsp; 
-                      <button onClick={()=>this.props.handleDeleteData()}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
+                      <button onClick={()=>this.props.handleDeleteData(item.id)}   style={this.deleteBtnStyle} className="button muted-button">Delete</button>
                   </td>
                   </tr>
                   
@@ -106,7 +106,9 @@ const mapStateToProps = (state) => {
 
 
 const mapDispatchToProps= (dispatch)=> ({
-  handleGetEmployeeData : () =>dispatch(getALLEmployee())
+  handleGetEmployeeData : () =>dispatch(getALLEmployee()),
+  handleDeleteData : (empId) =>dispatch(deleteEmployeeData(empId)),
+  handleUpdateData : (empId)=>dispatch(deleteEmployeeData(empId))
 })
 export default connect(
   mapStateToProps,

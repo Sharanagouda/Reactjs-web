@@ -237,7 +237,7 @@ export function getALLEmployee() {
           return result.json();
         })
         .then(jsonResult => {
-          console.log(jsonResult)
+          //console.log(jsonResult)
           dispatch(receivedEmpolyee(jsonResult));
         }),
       error => console.log(error)
@@ -265,6 +265,46 @@ export function postEmployeeData(recievedData) {
         }),
       error => console.log(error)
     );
+  };
+}
+
+
+export function deleteEmployeeData(empId) {
+  console.log(empId);
+  console.log(`http://dummy.restapiexample.com/api/v1/employees/${empId}`);
+  return dispatch => {
+    return (
+      fetch(`http://dummy.restapiexample.com/api/v1/employees/${empId}`, {
+        method: 'DELETE',
+      })
+        .then(result => {
+          return result.json();
+        })
+        .then(jsonResult => {
+          console.log(jsonResult)
+          //dispatch(receivedEmpolyee(jsonResult));
+        }),
+      error => console.log(error)
+    );
+  };
+}
+
+
+export function upDateEmployeeData(empId, data) {
+  console.log(empId, data);
+  console.log(`http://dummy.restapiexample.com/api/v1/employees/${empId}`);
+  return dispatch => {
+    return fetch('http://dummy.restapiexample.com/api/v1/employees/' + empId, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+      headers: {
+          'Content-Type': 'application/json'
+      }
+        })
+        .then(jsonResult => {
+          console.log(jsonResult)
+          //dispatch(receivedEmpolyee(jsonResult));
+    }).catch(err => err);
   };
 }
 

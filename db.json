@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1",
+       "body": "some comment",
+       "name": "sharanagouda"
+    },
+    {
+      "id": 2,
+      "title": "Post 2",
+       "body": "some comment",
+       "name": "sharanu"
+    },
+    {
+      "id": 3,
+      "title": "Post 3",
+       "body": "some comment",
+       "name": "suresh"
+    },
+    {
+      "id": 4,
+      "title": "Post 4",
+       "body": "some comment",
+       "name": "Sharanagouda K"
+    },
+    {
+      "id": 5,
+      "title": "Post 5",
+       "body": "some comment",
+       "name": "Abi"
+    },
+    {
+      "id": 6,
+      "title": "Post 6",
+       "body": "some comment",
+       "name": "sharan"
+    },
+    {
+      "id": 7,
+      "title": "Post 7",
+       "body": "some comment",
+       "name": "Devid"
+    },
+    {
+      "id": 8,
+      "title": "Post 8",
+       "body": "some comment",
+       "name": "John"
+    },
+    {
+      "id": 9,
+      "title": "Post 9",
+       "body": "some comment",
+       "name": "Kallayya"
+    },
+     {
+      "id": 10,
+      "title": "Post 10",
+       "body": "some comment",
+       "name": "Arnab"
+    },
+    {
+      "id": 11,
+      "title": "Post 11",
+       "body": "some comment",
+       "name": "Swamy"
+    },
+    {
+      "id": 12,
+      "title": "Post 12",
+       "body": "some comment",
+       "name": "Vineet"
+    }
+  ]
+ 
+}

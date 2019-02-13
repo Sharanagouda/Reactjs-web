@@ -29,14 +29,15 @@ render(){
     //console.log(selectedchannel)
 
     return(
-        <div onClick={()=>{this.props.onClick(this.props.channelName,this.props.channelString)}} className="col-md-3 col-sm-6">
-        {(this.props.selectedchannel == this.props.channelName)? ( <div className="selectedChannel-mainDiv">
-        <Image src={this.props.channelLogo} className="channelLogo" rounded />
-        <p className="channelName">{this.props.channelName}</p>
-        </div>):( <div className="channel-mainDiv">
-            <Image src={this.props.channelLogo} className="channelLogo" rounded />
-            <p className="channelName">{this.props.channelName}</p>
-        </div> )}
+        <div onClick={()=>{this.props.onClick(this.props.channelName,this.props.channelString)}} className="col-md-4 col-sm-6 col-lg-3" >
+        {(this.props.selectedchannel == this.props.channelName)? ( 
+            <div className="selectedChannel-mainDiv">
+                <Image src={this.props.channelLogo} className="channelLogo" rounded />
+                <p className="channelName">{this.props.channelName}</p>
+            </div>):( <div className="channel-mainDiv">
+                        <Image src={this.props.channelLogo} className="channelLogo" rounded />
+                        <p className="channelName">{this.props.channelName}</p>
+                    </div> )}
        
     </div>
     )

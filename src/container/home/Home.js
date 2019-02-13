@@ -9,7 +9,7 @@ export default class Home extends Component {
             <Jumbotron>
             <div >
             <h2 style={{textAlign:"center"}}>Welcome to myWebsite </h2>
-            <p style={{textAlign:"center"}}>This is how to build a website with React, React-Router &  React-Bootstrap</p>
+            <p style={{textAlign:"center"}}>This website is built using React, React-Router &  React-Bootstrap</p>
             
             </div>
                

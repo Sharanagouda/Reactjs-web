@@ -1,7 +1,7 @@
 import React from "react";
 import Channel from "../container/channels/Channels";
 const ChannelField = ()=>(
-    <div className="row">
+    <div>
     <Channel channelName="Google News (India)" channelString="google-news-in" channelLogo="assets/google.png"/>
     <Channel channelName="The times of India" channelString="the-times-of-india" channelLogo="assets/theTimesOfIndia.png"/>
     <Channel channelName="News 24" channelString="news24" channelLogo="assets/news24.ico" />

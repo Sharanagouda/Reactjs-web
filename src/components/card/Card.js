@@ -20,14 +20,14 @@ class Card extends Component {
     return (
       <div className="news-card-main-div">
         <header style={styleForTitle} className="card-header-for-title">
-            <h5 className="card-header--title">{this.props.title}</h5>
+            <h5 className="article-title">{this.props.title}</h5>
         </header>
         <header style={style} className="card-header">
           <h4 className="card-header-category">{this.props.category}</h4>
         </header>
         <div className="card-body">
-          <p className="date">Published On: {this.props.publishedOn}</p>
-          <p className="card-description">{this.props.description}</p>
+          <p className="date">Published On: {this.props.publishedAt}</p>
+          <p className="article-discription">{this.props.description}</p>
           <p className="body-content">{this.props.content}</p>
         </div>
             <a href={this.props.url} style={{ color: "blue",paddingLeft:"20px", fontSize: 15, }}>

@@ -20,7 +20,7 @@ class NewsPaper extends Component{
     renderList(){
         if(this.props.news){
             return(
-                <div  style={{ backgroundColor:"#F3F3F3" }}>
+                <div  style={{ backgroundColor:"#FFF" }}>
                 {this.props.news.map((item,i)=>{
                     return(
                     <div key={i} className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px" }}>
@@ -56,7 +56,7 @@ class NewsPaper extends Component{
                 <div>{this.renderList()}</div>
             </div>
         )
-    }
+        }
 }
 
 const mapStateToProps = (state)=> ({

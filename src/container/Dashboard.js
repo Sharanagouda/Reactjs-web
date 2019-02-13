@@ -10,7 +10,8 @@ class Dashboard extends Component {
   componentDidMount(){
     //this.props.getEmployee();
   }
-
+//https://react.tips/reactjs-and-geocoding/
+//https://scotch.io/tutorials/react-apps-with-the-google-maps-api-and-google-maps-react
   renderList(){
     return this.props.books.map((book)=>{
       return(

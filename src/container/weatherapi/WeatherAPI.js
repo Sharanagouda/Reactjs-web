@@ -21,6 +21,29 @@ class WeatherAPI extends Component {
      humidity:undefined,
      description:undefined,
      error:undefined,
+     latitude:undefined,
+     longitude:undefined
+    };
+  }
+componentDidMount=()=>{
+  this.getcurrentLocation();
+}
+  getcurrentLocation= async (e) =>{
+    if (navigator && navigator.geolocation) {
+      return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(pos => {
+          const coords = pos.coords;
+         this.setState({
+           longitude:coords.longitude,
+           latitude:coords.latitude
+         })
+         console.log(this.state.latitude,this.state.longitude);
+        });
+      });
+    }
+    return {
+      lat: 0,
+      lng: 0
     };
   }
 
@@ -28,7 +51,7 @@ class WeatherAPI extends Component {
 
       const city = e.city;
       const country = e.country;
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=matric`);
+      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
       const data = await api_call.json();
     //console.log(data);
   if(data.message !=="city not found" && (city && country)){
@@ -62,10 +85,10 @@ class WeatherAPI extends Component {
       <div className="wrapper">
         <div className="main">
             <div className="row">
-              <div className="col-xs-5 title-container">
+              <div className="col-xs-5 col-md-6 col-lg-7 title-container">
                  <Title/>
               </div>
-              <div className="col-xs-7 form-container">
+              <div className="col-xs-7 col-md-6 col-lg-6 form-container">
                 <Form getWeather={this.getWeather}/>
                 <Weather 
                   temperature={this.state.temperature}

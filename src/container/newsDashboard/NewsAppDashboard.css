@@ -3,7 +3,9 @@
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 1%;
-    margin-Top:-20px
+    margin-Top:-20px;
+    display: flex;
+    flex-direction: row;
 }
 .channel-main-div{
    

@@ -17,6 +17,8 @@ class Card extends Component {
       var styleForTitle={
           padding: "10px",
       }
+      const date= this.props.publishedAt
+      const publishedOn = date.slice(0, 10);
     return (
       <div className="news-card-main-div">
         <header style={styleForTitle} className="card-header-for-title">
@@ -26,7 +28,7 @@ class Card extends Component {
           <h4 className="card-header-category">{this.props.category}</h4>
         </header>
         <div className="card-body">
-          <p className="date">Published On: {this.props.publishedAt}</p>
+          <p className="date">Published On: {publishedOn}</p>
           <p className="article-discription">{this.props.description}</p>
           <p className="body-content">{this.props.content}</p>
         </div>

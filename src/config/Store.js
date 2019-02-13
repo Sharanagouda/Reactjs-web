@@ -4,6 +4,7 @@ import promise from "redux-promise";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 import reducers from "../reducers"
+import logger from 'redux-logger'
 
 const persistConfig = {
     key: "root",
@@ -16,7 +17,7 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 export default () => {
 
-    let store = createStore(persistedReducer, {}, applyMiddleware(thunk, promise));
+    let store = createStore(persistedReducer, {}, applyMiddleware(thunk, promise,logger));
     let persistor = persistStore(store);
     return { store, persistor };
 }

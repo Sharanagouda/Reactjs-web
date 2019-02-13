@@ -14,9 +14,10 @@ class MyBlog extends Component {
         { id: 1, topic: "React CURD Application", postedDate: "05/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
         { id: 2, topic: "React-Redux Bacic CURD Application", postedDate: "08/02/2019", linktoScreen:"/reduxCrudOperation",demoImage:"assets/reduxbasicCrurd.png"},
         { id: 3, topic: "Weather API Integration", postedDate: "12/02/2019", linktoScreen:"/weatherapi",demoImage:"assets/weatherinfo.png"},
-        { id: 4, topic: "Facebook Integration", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
-        { id: 5, topic: "React-Redux CURD Application", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
-        { id: 6, topic: "My Portfolio", postedDate: "12/02/2019", linktoScreen:"https://sharanagouda.github.io/",demoImage:"assets/curdWebApp.png"},
+        { id: 4, topic: "Mini shopping Cart", postedDate: "14/02/2019", linktoScreen:"/shoppingCart",demoImage:"assets/shoppingcart.png"},
+        { id: 5, topic: "Facebook Integration", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
+        { id: 6, topic: "React-Redux CURD Application", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
+        { id: 7, topic: "My Portfolio", postedDate: "12/02/2019", linktoScreen:"https://sharanagouda.github.io/",demoImage:"assets/curdWebApp.png"},
       ],
     };
     this.handleEditData = this.handleEditData.bind(this);
@@ -56,6 +57,7 @@ class MyBlog extends Component {
             </div>
             </Link>
           </li>
+          
         </div>
       );
     });
@@ -65,6 +67,23 @@ class MyBlog extends Component {
     return (
       <div>
         <ul>{this.renderList()}</ul>
+        <a href="https://sharanagouda.github.io/">
+        <ul>
+          <li style={{ listStyleType: "none" }}>
+            <div className="flex-topic" onClick={() => this.props.selectBook()} >
+              <div className="list-view">
+                <div className="topic-ImageDiv">
+                  <Image src={"assets/gitprofile.png"} className="topic-Image" />
+                  <div className="topic-content">
+                      <p className="topic-name">My Portfolio in github</p>
+                      <p className="posted-date">Posted on : 12/02/2019</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </a>
       </div>
     );
   }

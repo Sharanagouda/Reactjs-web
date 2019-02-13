@@ -30,3 +30,11 @@ export const GET_EMPLOYEE = "GET_EMPLOYEE";
 export const UPDATE_EMPLOYEE = "UPDATE_EMPLOYEE";
 export const DELETE_EMPLOYEE = "DELETE_EMPLOYEE";
 export const EDIT_EMPLOYEE = "EDIT_EMPLOYEE";
+
+//shoppingCart 
+export const ADD_TO_CART = "ADD_TO_CART";
+export const DELETE_FROM_CART = "DELETE_FROM_CART";
+export const UPDATE_ITEM_UNITS = "UPDATE_ITEM_UNITS";
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";

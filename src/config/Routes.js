@@ -15,6 +15,7 @@ import Dashboard from "../container/Dashboard.js";
 import ReactCrudTutorial from "../container/ReactCrudTutorial";
 import ReduxCrudOperation from "../container/reduxCrud/ReduxCRUD";
 import WeatherAPI from "../container/weatherapi/WeatherAPI";
+import ShoppingCart from "../container/shoppingCart/ShoppingCart";
 
 
 
@@ -38,7 +39,8 @@ class Routes extends Component {
           <Route path="/dashboard" exact component={Dashboard}/>
           <Route path="/reactcurdTutorial" exact component={ReactCrudTutorial}/>
           <Route path="/reduxCrudOperation" exact component={ReduxCrudOperation} />
-          <Route path="/weatherapi" component={WeatherAPI} title="Weather information"/>
+          <Route path="/weatherapi" exact component={WeatherAPI} title="Weather information"/>
+          <Route path="/shoppingCart" exact component={ShoppingCart} />
           <Route component={PageNotFound} />
           </Switch>
          <Footer/> 

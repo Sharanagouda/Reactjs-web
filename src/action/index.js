@@ -26,7 +26,14 @@ import {
   ADD_DATA,
   EDIT_DATA,
   GET_DATA,
-  UPDATE_DATA
+  UPDATE_DATA,
+
+  ADD_PRODUCT,
+  DELETE_PRODUCT,
+  UPDATE_PRODUCT,
+  ADD_TO_CART,
+  DELETE_FROM_CART,
+  UPDATE_ITEM_UNITS
 } from "../actionType";
 
 //=================================news api actions ============================================================================//
@@ -321,3 +328,39 @@ export function fetchPostsError() {
   };
 }
 //======================End of Employee database==========================//
+//============Shopping CART===PRODUCT ITEM Page==============================//
+export function addProduct({id, title,desciption, price}){
+  return{
+    type:ADD_PRODUCT,
+    payload:{id,title, desciption,price}
+  }
+}
+
+export function updateProduct({id, title}){
+  return{
+    type:UPDATE_PRODUCT,
+    payload:{id, title}
+  }
+}
+
+//========================cart Action =====================================//
+export function addToCart({id, title, description, price}){
+  return{
+    type:ADD_TO_CART,
+    payload:{id, title, description, price}
+  }
+}
+
+export function deleteFromCart(id){
+  return{
+    type:DELETE_FROM_CART,
+    payload:{id}
+  }
+}
+
+export function updateItemUnits(id, units){
+return{
+  type:UPDATE_ITEM_UNITS,
+  payload:{id, units}
+}
+}

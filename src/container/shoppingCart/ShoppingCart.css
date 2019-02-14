@@ -1,15 +1,26 @@
+.main-shopping-div{
+    background: linear-gradient(to right, #667eea, #764ba2);
+    margin-top: -20px;
+    padding-bottom: 60px;
+}
+
 .split {
     display:flex;
-    padding-top: 20px;
     flex-direction: row;
   }
   
-  .left {
+  .productList {
     left: 0;
-    background-color: #111;
   }
   
-  .right {
+  .cartBox {
     right: 0;
-    background-color: red;
+    width:40%
+  }
+  .content-shopping{
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: white;
+
   }

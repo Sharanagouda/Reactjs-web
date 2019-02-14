@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {updateItemUnits, deleteFromCart} from "./../../action";
-import {Col, Row, Panel, Badge} from "react-bootstrap";
+import {Col, Row, Panel, Badge, Button} from "react-bootstrap";
 import CartItem from "./CartItem";
 //https://github.com/steelx/shoppingcart/tree/master/src/components
 class Cart extends Component {
@@ -51,6 +51,9 @@ cartTotal() {
             <Row>
                 <Col xs={12} sm={6}>
                     <h4>TOTAL: <Badge pullRight>Price: INR {this.totalAmount(this.props.cart)}</Badge></h4>
+                </Col>
+                <Col xs={12} sm={6}>
+                    <Button bsStyle="success"> Proceed to Checkout</Button>
                 </Col>
             </Row>
         </Panel>

@@ -37,17 +37,17 @@ class ShoppingCart extends Component {
       const {products} =this.props;
       //console.log(products);
     return (
-      <div >
-        <h1>Welcome to Mini Shopping Cart: Redux</h1>
+      <div className="main-shopping-div">
+        <p className="content-shopping">Welcome to Mini Shopping Cart: Redux</p>
         <div className="split">
-        <div>
-       {this.renderProducts()}
-       </div>
-       <div>
-        <Cart/>
+          <div className="productList">
+            {this.renderProducts()}
+          </div>
+          <div className="cartBox">
+            <Cart/>
+          </div>
         </div>
-       </div>
-       </div>
+      </div>
     );
   }
 }

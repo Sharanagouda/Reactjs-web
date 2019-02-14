@@ -6,8 +6,8 @@ class ProductItem extends Component{
     render(){
         return(
             <Well>
-                <Row>
-                    <Col xs={12} className='productItem'>
+                <Row style={{flexWrap:"wrap", display:"flex",flexDirection:"row"}}>
+                    <Col xs={12} className='productItem'  >
                         <h4>{this.props.product.title}</h4>
                         <p>{this.props.product.description}</p>
                         <p>Price: INR {this.props.product.price}</p>

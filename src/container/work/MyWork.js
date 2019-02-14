@@ -15,7 +15,7 @@ class MyBlog extends Component {
         { id: 2, topic: "React-Redux Bacic CURD Application", postedDate: "08/02/2019", linktoScreen:"/reduxCrudOperation",demoImage:"assets/reduxbasicCrurd.png"},
         { id: 3, topic: "Weather API Integration", postedDate: "12/02/2019", linktoScreen:"/weatherapi",demoImage:"assets/weatherinfo.png"},
         { id: 4, topic: "Mini shopping Cart", postedDate: "14/02/2019", linktoScreen:"/shoppingCart",demoImage:"assets/shoppingcart.png"},
-        { id: 5, topic: "Facebook Integration", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
+        { id: 5, topic: "News App", postedDate: "13/02/2019", linktoScreen:"/latestNews",demoImage:"assets/newsApp.png"},
         { id: 6, topic: "React-Redux CURD Application", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
         { id: 7, topic: "My Portfolio", postedDate: "12/02/2019", linktoScreen:"https://sharanagouda.github.io/",demoImage:"assets/curdWebApp.png"},
       ],

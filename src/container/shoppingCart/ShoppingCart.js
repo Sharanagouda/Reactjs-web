@@ -37,13 +37,17 @@ class ShoppingCart extends Component {
       const {products} =this.props;
       //console.log(products);
     return (
-      <Grid>
-      <Row><h1>Welcome to Mini Shopping Cart: Redux</h1></Row>
-      <Row><Cart /></Row>
-      <Row style={{margin:'15px'}}>
-          {this.renderProducts()}
-      </Row>
-      </Grid>
+      <div >
+        <h1>Welcome to Mini Shopping Cart: Redux</h1>
+        <div className="split">
+        <div>
+       {this.renderProducts()}
+       </div>
+       <div>
+        <Cart/>
+        </div>
+       </div>
+       </div>
     );
   }
 }

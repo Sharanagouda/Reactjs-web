@@ -20,7 +20,7 @@ renderCart() {
     );
 }
 handleDeleteFromCart(id) {
-    this.props.handleDeteFromCart(id)
+    this.props.handleDeteFromCart({id})
 }
 handleDeductUnit(id) {
     let units = -1;

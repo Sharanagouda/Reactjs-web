@@ -5,16 +5,24 @@ import './About.css';
 export default class About extends Component {
   render() {
     return (
-      <div>
-        <Image src="assets/dog-people.jpg" className="header-image" />
-        
+      <div className="about-div">
+      <Image src="assets/mountain-man.jpg" className="header-image" />
           <Col xs={12} sm={8} smOffset={2}>
             <Image src="assets/sharan.jpeg" className="about-profile-pic" rounded />
             <h3>Sharanagouda K</h3>
-            <p>That's a crooked tree. We'll send him to Washington. These little son of a guns hide in your brush and you just have to push them out. These trees are so much fun. I get started on them and I have a hard time stopping. How to paint. That's easy. What to paint. That's much harder. Be brave. The man who does the best job is the one who is happy at his job.</p>
-            <p>Anyone can paint. You can do anything here. So don't worry about it. Life is too short to be alone, too precious. Share it with a friend. Every highlight needs it's own personal shadow.</p>
-            <p>That's what makes life fun. That you can make these decisions. That you can create the world that you want. Of course he's a happy little stone, cause we don't have any other kind. It's so important to do something every day that will make you happy.</p>
-            <p>You better get your coat out, this is going to be a cold painting. That's the way I look when I get home late; black and blue. That's crazy. We're trying to teach you a technique here and how to use it.</p>
+            <p>Hey there, I’m Sharanagouda K. I’m a software engineer in the Bangalore city. <br/>
+               These days I build frontend UIs with React. A couple years ago it was Angular. Long ago,<br/>
+               I work on mobile and web application.<br/>
+               This blog contains my best answers to questions that UI developers struggle with.<br/>
+               Most of the posts are about React or Angular, with a few other random things thrown in.
+            </p>
+            <p> spend a lot of time walking around in the woods and talking to trees, and squirrels, and little rabbits and stuff.<br/>
+                The secret to doing anything is believing that you can do it.<br/>
+                Anything that you believe you can do strong enough, you can do. Anything. As long as you believe.<br/>
+                Just go out and talk to a tree. Make friends with it. I guess that would be considered a UFO. A big cotton ball in the sky.<br/>
+                Tree trunks grow however makes them happy. In nature, dead trees are just as normal as live trees.<br/>
+                Sometimes you learn more from your mistakes than you do from your masterpieces. Here's something that's fun.<br/>
+                If you overwork it you become a cloud killer. There's nothing worse than a cloud killer. These trees are so much fun. I get started on them and I have a hard time stopping.</p>
           </Col>
         
       </div>

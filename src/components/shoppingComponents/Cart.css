@@ -1,0 +1,15 @@
+.cart-Content{
+display: flex;
+align-items: center;
+    justify-content: center
+}
+.cart-total-Main-div{
+    display: flex;
+    background-color: white
+}
+.checkout-div{
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}

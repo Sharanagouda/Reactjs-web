@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { addToCart } from "./../../action";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
-import {Col, Row, Grid} from "react-bootstrap";
+import {Col, Row, Grid,Image} from "react-bootstrap";
 import ProductItem from "./../../components/shoppingComponents/ProductItem";
 import Cart from "./../../components/shoppingComponents/Cart";
 
@@ -44,6 +44,12 @@ class ShoppingCart extends Component {
             {this.renderProducts()}
           </div>
           <div className="cartBox">
+          <div className="cartEntry">
+          <div className="cart-text">
+          <p className="contentText">Selected Items</p>
+          </div>
+          <Image src="assets/cartImage.jpg" className="cart-Icon" rounded />
+         </div>
             <Cart/>
           </div>
         </div>

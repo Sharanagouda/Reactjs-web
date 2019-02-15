@@ -15,7 +15,9 @@
   
   .cartBox {
     right: 0;
-    width:40%
+    width:80%;
+    background-color: #667eea;
+    margin-right: 20px;
   }
   .content-shopping{
       text-align: center;
@@ -24,3 +26,28 @@
       color: white;
 
   }
+  .cartEntry{
+    height: 80px;
+    display: flex;
+    background-color: aqua;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cart-Icon{
+  padding-top: 5px;
+  float: right;
+  height: 70px;
+  width: 70px;
+}
+.cart-text{
+  justify-content: center;
+  align-items: center;
+display: flex
+}
+.contentText{
+  text-align: center;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  
+}

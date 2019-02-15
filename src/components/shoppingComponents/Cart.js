@@ -4,6 +4,9 @@ import {bindActionCreators} from "redux";
 import {updateItemUnits, deleteFromCart} from "./../../action";
 import {Col, Row, Panel, Badge, Button} from "react-bootstrap";
 import CartItem from "./CartItem";
+import "./Cart.css";
+
+
 //https://github.com/steelx/shoppingcart/tree/master/src/components
 class Cart extends Component {
 constructor(props){
@@ -47,16 +50,16 @@ cartList() {
 
 cartTotal() {
     return (
-        <Panel>
-            <Row>
-                <Col xs={12} sm={6}>
-                    <h4>TOTAL: <Badge pullRight>Price: INR {this.totalAmount(this.props.cart)}</Badge></h4>
-                </Col>
-                <Col xs={12} sm={6}>
-                    <Button bsStyle="success"> Proceed to Checkout</Button>
-                </Col>
-            </Row>
-        </Panel>
+        <div>
+            <div className="cart-total-Main-div">
+                <div >
+                    <h4>TOTAL Price: INR {this.totalAmount(this.props.cart)}</h4>
+                </div>
+            </div>
+            <div className="checkout-div">
+            <Button bsStyle="success"> Proceed to Checkout</Button>
+        </div>
+        </div>
     );
 }
 totalAmount(cartArray) {
@@ -67,6 +70,8 @@ totalAmount(cartArray) {
 }
 
 render() {
+    const {cart} =this.props;
+    console.log(cart);
     if (this.props.cart.length !== 0) {
         return (
             <aside className='cart'>
@@ -77,7 +82,9 @@ render() {
     }
 
     return (
-        <aside className='cart'>cart empty</aside>
+        <div className='cart-Content'>
+        <p> cart empty</p>
+       </div>
     );
 }
 }

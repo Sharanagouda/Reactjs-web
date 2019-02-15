@@ -1,28 +1,32 @@
 import React from "react";
-import {Col, Row, Button, Panel, Label, Badge} from "react-bootstrap";
+import {Col, Row, Button, Panel, Label, Badge,Image} from "react-bootstrap";
+import "./CartItem.css";
 
 class CartItem extends React.Component{
     render(){
         return(
-            <Panel className='cartItem'>
-                <Row>
-                    <Col xs={12} sm={6}>
-                        <h5>{this.props.cartItem.title} <Badge pullRight>Price: INR {this.props.cartItem.price}</Badge></h5>
-                    </Col>
-                    <Col xs={6} sm={4}>
+            <div className='cartItem'>
+                <div className="cartItem-div">
+                    <div  className="flex-first">
+                    <p className="productTitle">{this.props.cartItem.title}</p>
+                    <Image src={this.props.cartItem.productImage} className="cart-Image" rounded />
+                       
+                    </div>
+                    <div  className="flex-second">
+                    <h5><Badge pullRight>Price: INR {this.props.cartItem.price}</Badge></h5>
                         <p>units :&nbsp;
                             <Label bsStyle='success'> {this.props.cartItem.units} </Label>
                             &nbsp;
                             <Button bsSize='small' onClick={() => this.props.onAddUnit()}>+</Button>
                             <Button bsSize='small' onClick={() => this.props.onDeductUnit()}>-</Button>
                         </p>
-                    </Col>
-                    <Col xs={6} sm={2}>
+                    </div>
+                    <div  className="flex-three">
                         <Button onClick={() => this.props.handleDeleteFromCart()}
                                 bsSize='small' bsStyle='danger'>DEL</Button>
-                    </Col>
-                </Row>
-            </Panel>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

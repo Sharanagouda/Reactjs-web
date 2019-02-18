@@ -75,8 +75,7 @@ export default class News extends Component {
           {renderPageNumbers}
         
         </ul>
-
-      </div>
-    )
+        </div>
+    );
   }
 }

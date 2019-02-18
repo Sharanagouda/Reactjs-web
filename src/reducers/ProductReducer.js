@@ -10,6 +10,11 @@ const initialState = [
     {id:7, title:"Carrot", description:" some orange Carrot", price:70, productImage:"assets/cart/carrot.jpeg"},
     {id:8, title:"Mango", description:" some sweet Mango", price:60,productImage:"assets/cart/mango.jpg"},
     {id:9, title:"pineapple", description:" some yellow pineapple", price:40, productImage:"assets/cart/pineapple.jpg"},
+    {id:10, title:"Guava", description:" some green Guava", price:30, productImage:"assets/cart/Guava.jpg"},
+    {id:11, title:"Strawberry", description:" some red Strawberry", price:85, productImage:"assets/cart/strawberry.jpg"},
+    {id:12, title:"Pomegranate", description:" some red Pomegranate", price:65, productImage:"assets/cart/pomegranates.jpg"},
+    {id:13, title:"Watermelon", description:" some red WaterMelon", price:45, productImage:"assets/cart/watermelon.jpg"},
+    {id:14, title:"Pears", description:" some green Pears", price:70, productImage:"assets/cart/pears.jpg"},
 ];
 
 export default function productReducer(state=initialState, action={}){

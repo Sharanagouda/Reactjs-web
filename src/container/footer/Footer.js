@@ -6,15 +6,13 @@ import './Footer.css'
 class Footer extends Component {
   render(){
     return(
-
         <div>
          <footer style={footer}>
          © Copyright 2019 Sharanagouda K. All rights reserved 
          </footer>  
-
         </div>
     );
-}
+  }
 }
 
 const footer={

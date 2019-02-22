@@ -38,3 +38,12 @@ export const UPDATE_ITEM_UNITS = "UPDATE_ITEM_UNITS";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+
+//Mini todo Applition
+export const SET_VISIBILITY = "SET_VISIBILITY";
+export const ADD_TODO = "ADD_TODO";
+export const SHOW_ALL = "SHOW_ALL";
+export const SHOW_COMPLETED = "SHOW_COMPLETED";
+export const SHOW_ACTIVE = "SHOW_ACTIVE";
+export const TOGGLE_TODO = "TOGGLE_TODO";
+

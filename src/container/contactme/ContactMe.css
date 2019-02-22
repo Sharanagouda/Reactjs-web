@@ -1,0 +1,21 @@
+.main-contact-div{
+}
+.contact-content-div{
+    padding-left: 5%;
+    line-height: 25px;
+    padding-bottom: 8%;
+    padding-top: 2%;
+}
+.contact-map-maindiv{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.flex-One{
+    justify-content: flex-end;
+    padding-left: 5%;
+    line-height: 25px;
+}
+.flex-Two{
+    justify-content: flex-start
+}

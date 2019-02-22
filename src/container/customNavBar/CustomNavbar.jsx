@@ -78,6 +78,7 @@ const header={
   top: "0",
   width: "100%",
   color: "white",
+  textAlign: "center",
 
 }
 export default CustomNavbar;

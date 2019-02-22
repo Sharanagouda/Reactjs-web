@@ -1,5 +1,6 @@
 nav.navbar, .navbar-default {
   background-color: #22252e !important;
+  background: linear-gradient(to right, #fc6767, #ec008c);
 }
 
 .navbar-default {

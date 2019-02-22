@@ -17,7 +17,7 @@ class MyBlog extends Component {
         { id: 4, topic: "Mini shopping Cart", postedDate: "14/02/2019", linktoScreen:"/shoppingCart",demoImage:"assets/shoppingcart.png"},
         { id: 5, topic: "News App", postedDate: "13/02/2019", linktoScreen:"/latestNews",demoImage:"assets/newsApp.png"},
         { id: 6, topic: "React-Redux CURD Application", postedDate: "13/02/2019", linktoScreen:"/reactReduxCrud",demoImage:"assets/curdWebApp.png"},
-        { id: 7, topic: "My Portfolio", postedDate: "12/02/2019", linktoScreen:"https://sharanagouda.github.io/",demoImage:"assets/curdWebApp.png"},
+        { id: 7, topic: "Todo App", postedDate: "18/02/2019", linktoScreen:"/todoApp",demoImage:"assets/curdWebApp.png"},
       ],
     };
     this.handleEditData = this.handleEditData.bind(this);

@@ -17,6 +17,6 @@ const rootReducer = combineReducers({
   posts:PostReducer,
   apiData: ApiDataReducer,
   cart:CartReducer,
-  products:ProductReducer
+  products:ProductReducer,
 });
 export default rootReducer;

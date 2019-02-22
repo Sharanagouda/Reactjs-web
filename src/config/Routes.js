@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import Home from "../container/home/Home";
 import About from "../container/about/About";
 import News from "../container/News";
-import Navbar from "../container/customNavBar/CustomNavbar";
-import ContactMe from "../container/ContactMe";
+import Header from "../container/customNavBar/CustomNavbar";
+import ContactMe from "../container/contactme/ContactMe";
 import Tutorial from "../container/tutorial/Tutorial";
 import MyWork from "../container/work/MyWork";
 import LatestNews from "../container/newsScreen/NewsPaper"; 
@@ -18,14 +18,12 @@ import WeatherAPI from "../container/weatherapi/WeatherAPI";
 import ShoppingCart from "../container/shoppingCart/ShoppingCart";
 
 
-
-
 class Routes extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Navbar />
+          <Header />
           <Switch>
           <Route exact path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
@@ -41,6 +39,7 @@ class Routes extends Component {
           <Route path="/reduxCrudOperation" exact component={ReduxCrudOperation} />
           <Route path="/weatherapi" exact component={WeatherAPI} title="Weather information"/>
           <Route path="/shoppingCart" exact component={ShoppingCart} />
+          
           <Route component={PageNotFound} />
           </Switch>
          <Footer/> 

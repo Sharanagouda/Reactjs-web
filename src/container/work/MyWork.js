@@ -12,7 +12,7 @@ class MyBlog extends Component {
     this.state = {
       usersData: [
         { id: 1, topic: "React CURD Application", postedDate: "05/02/2019", linktoScreen:"/reactcrud",demoImage:"assets/curdWebApp.png"},
-        { id: 2, topic: "React-Redux Bacic CURD Application", postedDate: "08/02/2019", linktoScreen:"/reduxCrudOperation",demoImage:"assets/reduxbasicCrurd.png"},
+        { id: 2, topic: "React-Redux Basic CURD Application", postedDate: "08/02/2019", linktoScreen:"/reduxCrudOperation",demoImage:"assets/reduxbasicCrurd.png"},
         { id: 3, topic: "Weather API Integration", postedDate: "12/02/2019", linktoScreen:"/weatherapi",demoImage:"assets/weatherinfo.png"},
         { id: 4, topic: "Mini shopping Cart", postedDate: "14/02/2019", linktoScreen:"/shoppingCart",demoImage:"assets/shoppingcart.png"},
         { id: 5, topic: "News App", postedDate: "13/02/2019", linktoScreen:"/latestNews",demoImage:"assets/newsApp.png"},
@@ -45,7 +45,7 @@ class MyBlog extends Component {
       return (
         <div className="flex-topic" key={item.id} onClick={() => this.props.selectBook(item)} >
           <li style={{ listStyleType: "none" }}>
-            <Link to={item.linktoScreen} href={item.linktoScreen}>
+            <Link to={item.linktoScreen} >
             <div className="list-view">
               <div className="topic-ImageDiv">
                  <Image src={item.demoImage} className="topic-Image" />

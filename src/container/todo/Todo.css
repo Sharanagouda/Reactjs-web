@@ -1,0 +1,30 @@
+.main-title{
+    font-size: 20px;
+    text-align: center;
+}
+.list-item{
+    font-size: 18px
+}
+
+#addInput {
+    background-color: transparent;
+    border: 0;
+    border: solid 1px #cdcdcd;
+    width: 50%;
+    padding-bottom: 4px;
+    color: #000 !important;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  
+  #addInput{ 
+      outline: none;
+  }
+  
+  input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+      -webkit-text-fill-color: #000 !important;
+  }

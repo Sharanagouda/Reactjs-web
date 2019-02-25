@@ -141,7 +141,7 @@ class ContactMe extends Component{
             <br/>
             I check my email box once a day so you should get a reply within 24-48 hours. If not, re-send your question.
             <br/>
-            P.S. If you have any blog setup questions, have a look at this guide – How To Create a Blog</p>
+            P.S. If you have any blog setup questions,</p>
         </div>
         <div className="contact-map-maindiv">
         <div className="flex-one-form">
@@ -152,7 +152,7 @@ class ContactMe extends Component{
             </label>
             <label>
               Your Email
-              <input required type="text" id="inputText" ref={(input)=>this.getEmail = input} placeholder="email" />
+              <input required type="email" id="inputText" ref={(input)=>this.getEmail = input} placeholder="email" />
             </label>
             <label>
               Contact no (optional):
@@ -173,6 +173,7 @@ class ContactMe extends Component{
         {this.state.messageSuccess==true ? <div className="messageSuccess-Div"><p className="successText">Message sent</p></div>:''}
         </div>
         <div className="flex-two">
+        <p>Find me on Google Map</p>
         <Map
         google={this.props.google}
         zoom={14}

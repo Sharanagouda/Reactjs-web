@@ -37,7 +37,7 @@
 #inputText {
     background-color: transparent;
     border: 0;
-    border: solid 1px #2c3e50;
+    border: solid 1px #cdcdcd;
     width: 50%;
     padding-bottom: 4px;
     color: #000 !important;
@@ -54,7 +54,7 @@
   
   input:-webkit-autofill {
       -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
-      -webkit-text-fill-color: #fff !important;
+      -webkit-text-fill-color: #000 !important;
   }
 
   input[type="number"] {
@@ -77,13 +77,13 @@
   
   input:-webkit-autofill {
       -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
-      -webkit-text-fill-color: #fff !important;
+      -webkit-text-fill-color: #000 !important;
   }
 
   textarea[type="text"] {
     background-color: transparent;
     border: 0;
-    border: solid 1px #2c3e50;
+    border: solid 1px #cdcdcd;
     width: 60%;
     padding-bottom: 4px;
     color: #000 !important;

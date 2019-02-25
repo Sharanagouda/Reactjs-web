@@ -16,7 +16,7 @@ import ReactCrudTutorial from "../container/ReactCrudTutorial";
 import ReduxCrudOperation from "../container/reduxCrud/ReduxCRUD";
 import WeatherAPI from "../container/weatherapi/WeatherAPI";
 import ShoppingCart from "../container/shoppingCart/ShoppingCart";
-
+import Todo from "../container/todo/Todo";
 
 class Routes extends Component {
   render() {
@@ -39,7 +39,7 @@ class Routes extends Component {
           <Route path="/reduxCrudOperation" exact component={ReduxCrudOperation} />
           <Route path="/weatherapi" exact component={WeatherAPI} title="Weather information"/>
           <Route path="/shoppingCart" exact component={ShoppingCart} />
-          
+          <Route path="/todoApp" exact component={Todo} />
           <Route component={PageNotFound} />
           </Switch>
          <Footer/> 

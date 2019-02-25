@@ -6,6 +6,7 @@ import './Home.css';
 export default class Home extends Component {
     render() {
         return <div>
+        <Image src="assets/mountain.jpeg" className="main-image"/>
             <Jumbotron>
             <div >
             <h2 style={{textAlign:"center"}}>Welcome to myWebsite </h2>

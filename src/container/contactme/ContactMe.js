@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import {connect} from "react-redux"
 import {link} from "react-router-dom";
 import {Jombotran, Rrid, Row, Col, Image, Button} from "react-bootstrap";
-import "./ContactMe.css";
+import "./Contactme.css";
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import CurrentLocation from "./CurrentLocation";
 
@@ -18,24 +18,39 @@ class ContactMe extends Component{
           currentLocation:{
             lat :'',
             long: ''
-        },
-        name:'',
-        contactno:''
+          },
+          name:'',
+          contactno:'',
+          email:'',
+          subject:'',
+          message:'',
+          messageSuccess:false
           }
           // binding this to event-handler functions
           this.onMarkerClick = this.onMarkerClick.bind(this);
           this.onClose = this.onClose.bind(this);
-          this.handleNameChange = this.handleNameChange.bind(this);
-          this.handleContactNoChange = this.handleContactNoChange.bind(this);
-       
     }
-    handleNameChange(event){
-      const name = event.target.value
-    this.setState({ name: name })
-  }
-  handleContactNoChange(event){
-      const contactno = event.target.value
-    this.setState({ contactno: contactno })
+
+    handleSubmit = (event) =>{
+      event.preventDefault();
+      const name = this.getName.value;
+      const contactno = this.getContactNo.value;
+      const email = this.getEmail.value;
+      const subject = this.getSubject.value;
+      const message = this.getMessage.value;
+  
+      const data = {
+          name,
+          email,
+          contactno,
+          subject,
+          message
+      }
+      this.setState({
+        messageSuccess:true
+      })
+      console.log(data);
+      event.target.reset()
   }
     onMarkerClick = (props, marker, e) =>
     this.setState({
@@ -113,7 +128,7 @@ class ContactMe extends Component{
   render() {
     const style = {
       width: '40vw',
-      height: '55vh',
+      height: '50vh',
     }
 
       return (
@@ -128,38 +143,34 @@ class ContactMe extends Component{
             <br/>
             P.S. If you have any blog setup questions, have a look at this guide – How To Create a Blog</p>
         </div>
-        <div className="flex-row">
-        <div className="flex-one">
-        <form onSubmit={event=>{
-          event.preventDefault();
-         const { name,  contactno } = this.state
-         const userData = {name, contactno};
-        if (!name || !contactno) return
-         this.props.handleEditData(userData);
-         event.target.reset();
-          }}>
+        <div className="contact-map-maindiv">
+        <div className="flex-one-form">
+        <form onSubmit={this.handleSubmit}>
             <label>
               Name:
-              <input type="text" ref={(input) => this.input = input} onChange={this.handleNameChange}/>
+              <input required type="text" id="inputText" ref={(input)=>this.getName = input} placeholder="name" />
             </label>
             <label>
-          Your Email
-          <input type="text" ref={(input) => this.input = input} onChange={this.handleNameChange}/>
-        </label>
-        <label>
-          Subject
-          <input type="text" ref={(input) => this.input = input} onChange={this.handleNameChange}/>
-        </label>
-        <label>
-          Contact no:
-          <input type="number" pattern="[0-9]*" ref={(input) => this.input = input} onChange={this.handleContactNoChange}/>
-        </label>
-        <label>
-          Your Message
-          <textarea type="text" col="25" row="15" ref={(input) => this.input = input} onChange={this.handleNameChange}/>
-        </label>
-            <input type="submit" value="Submit" />
-          </form>
+              Your Email
+              <input required type="text" id="inputText" ref={(input)=>this.getEmail = input} placeholder="email" />
+            </label>
+            <label>
+              Contact no (optional):
+              <input type="number" pattern="[0-9]*" ref={(input) => this.getContactNo = input} placeholder="Contact no"/>
+            </label>
+            <label>
+              Subject
+              <input required type="text" id="inputText" ref={(input)=>this.getSubject = input} placeholder="Subject" />
+            </label>
+            <label>
+              Your Message
+              <textarea type="text" required col="25" row="15" ref={(input) => this.getMessage = input} placeholder="Enter your message"/>
+            </label>
+            <br/>
+            <button>Submit</button>
+        </form>
+        <br/>
+        {this.state.messageSuccess==true ? <div className="messageSuccess-Div"><p className="successText">Message sent</p></div>:''}
         </div>
         <div className="flex-two">
         <Map
@@ -184,7 +195,7 @@ class ContactMe extends Component{
             <h4>{this.state.selectedPlace.name}</h4>
           </div>
         </InfoWindow>
-  </Map>
+       </Map>
         </div>
       </div>
                 

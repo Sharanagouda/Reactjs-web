@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: -20px;
-    padding-bottom:50px
+   margin-bottom:5%
   }
   
   .main {
@@ -22,6 +22,7 @@ body {
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
     width: 80%;
     margin: 0 auto;
+     padding-bottom:50px
   }
   
   .title-container {

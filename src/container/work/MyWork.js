@@ -65,7 +65,7 @@ class MyBlog extends Component {
 
   render() {
     return (
-      <div>
+      <div class="work-main-container">
         <ul>{this.renderList()}</ul>
         <a href="https://sharanagouda.github.io/">
         <ul>

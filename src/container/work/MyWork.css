@@ -1,3 +1,7 @@
+.work-main-container{
+    padding-bottom:5%;
+}
+
 .flex-topic{
     justify-content: center;
     align-items: center;
@@ -6,6 +10,7 @@
     margin-bottom: 20px;
     padding: 1%;
     border-radius: 10px;
+   
 }
 .list-view{
     display: flex;

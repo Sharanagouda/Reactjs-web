@@ -42,7 +42,7 @@ class Tutorial extends Component{
     }
      render() {
         return (
-            <div>
+            <div className="tutorial-main-div">
             <h2 style={{textAlign:"center"}}>Welcome to Tutorial  </h2>
             <p style={{textAlign:"center"}}>I have added some usefull Tutorial on react</p>
             <ul>{this.renderList()}</ul>

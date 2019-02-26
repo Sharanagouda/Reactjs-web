@@ -28,7 +28,7 @@ class CustomNavbar extends Component {
               href="/about"
               to="/about"
             >
-              About Me
+              About
             </NavItem>
             <NavItem
               eventKey={3}
@@ -52,7 +52,7 @@ class CustomNavbar extends Component {
               href="/tutorial"
               to="/tutorial"
             >
-              Tutorial
+              Blog
             </NavItem>
             <NavItem
               eventKey={6}
@@ -60,7 +60,7 @@ class CustomNavbar extends Component {
               href="/contactme"
               to="/contactme"
             >
-              Contact Me
+              Contact
             </NavItem>
           </Nav>
         </Navbar.Collapse>

@@ -170,7 +170,7 @@ class ContactMe extends Component{
             <button>Submit</button>
         </form>
         <br/>
-        {this.state.messageSuccess==true ? <div className="messageSuccess-Div"><p className="successText">Message sent</p></div>:''}
+        {this.state.messageSuccess==true ? <div className="messageSuccess-Div"><p className="successText">Thanks for reaching out to me. I'll be in contact as soon as possible!</p></div>:''}
         </div>
         <div className="flex-two">
         <p>Find me on Google Map</p>

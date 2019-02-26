@@ -1,3 +1,20 @@
+
+.content-div{
+background-image: `url("assets/mountain.jpeg")`; 
+   background-size: cover;
+   min-width: 100%;
+   min-height: 100%;
+   margin-top: -2em;
+   margin-bottom: 2em;
+   height:60em;
+    display:flex;
+   justify-content:center;
+   align-items:center;
+   flex:1;
+   flex-Direction:column
+   
+}
+
 .jumbotron {
   margin-bottom: 4em;
 }

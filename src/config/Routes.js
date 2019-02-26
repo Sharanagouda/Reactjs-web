@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route,Switch, Link } from "react-router-dom";
 import Home from "../container/home/Home";
 import About from "../container/about/About";
 import News from "../container/News";
@@ -49,6 +49,13 @@ class Routes extends Component {
   }
 }
 
-const PageNotFound =()=>(<div><p>404 PageNotFound</p></div>)
+const PageNotFound =()=>(<div style={{marginTop:'75px'}}>
+    <section className="section content has-text-centered" style={{minHeight:'750px'}}>
+      <h1 style={{textAlign:"center"}}> #404 Page not found</h1>
+      <p className='is-size-5' style={{borderTop:'1px solid #222', paddingTop:'20px', textAlign:"center"}}>Looks like you found a page that doesn't exist!</p>
+      <p style={{textAlign:"center"}}>You can go back home by clicking <Link to='/'>here</Link>.</p>
+    </section>
+    <Footer />
+  </div>)
 
 export default Routes;

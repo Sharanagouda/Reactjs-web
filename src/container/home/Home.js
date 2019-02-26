@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 import './Home.css';
+import ContactFrom from "./../forms/ContactForm"
 var image_url = "assets/mountain.jpeg"
 export default class Home extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class Home extends Component {
             <div className="content-div" style={{ backgroundImage : `url(${image_url})` }}>
             <h2 style={{}}>Front end Developer </h2>
             <p style={{}}>Person</p>
-            <Button >Hire Me </Button>
+            <button ><a href="#cform" className="buttonTitle"> Hire Me</a></button>
             </div>
                
            
@@ -45,6 +46,9 @@ export default class Home extends Component {
             </p>
                 </Col>
     </Row>
+    <div className="form-div-inHome" id="cform">
+    <ContactFrom/>
+    </div>
         </div>
         )
     }

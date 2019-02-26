@@ -9,4 +9,10 @@
     padding : "10px"
   }
   
-  
+  ul {
+  list-style-type: none;
+}
+ul li{
+  display: inline;
+  padding:10px;
+}

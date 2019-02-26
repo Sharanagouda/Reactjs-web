@@ -6,27 +6,24 @@ export default class About extends Component {
   render() {
     return (
       <div className="about-div">
-       <Image src="assets/sharan.jpeg" className="about-profile-pic" rounded />
-       
-          <Col xs={12} sm={8} smOffset={2}>
-           
-            <h3>Sharanagouda K</h3>
-            <h2>Hey There!</h2>
-            <p> I’m Sharanagouda K. I’m a software engineer in the Bangalore city. <br/>
-               These days I build frontend UIs with React. A couple years ago it was Angular. Long ago,<br/>
-               I work on mobile and web application.<br/>
-               This blog contains my best answers to questions that UI developers struggle with.<br/>
-               Most of the posts are about React or Angular, with a few other random things thrown in.
-            </p>
-            <p> spend a lot of time walking around in the woods and talking to trees, and squirrels, and little rabbits and stuff.<br/>
-                The secret to doing anything is believing that you can do it.<br/>
-                Anything that you believe you can do strong enough, you can do. Anything. As long as you believe.<br/>
-                Just go out and talk to a tree. Make friends with it. I guess that would be considered a UFO. A big cotton ball in the sky.<br/>
-                Tree trunks grow however makes them happy. In nature, dead trees are just as normal as live trees.<br/>
-                Sometimes you learn more from your mistakes than you do from your masterpieces. Here's something that's fun.<br/>
-                If you overwork it you become a cloud killer. There's nothing worse than a cloud killer. These trees are so much fun. I get started on them and I have a hard time stopping.</p>
-          </Col>
-        
+        <div className="container" style={{minHeight:'750px'}}>
+          <section className="section">
+            <div className='headshot' id='animate-img'>
+              <img src="assets/sharan.jpeg" alt='sharanagouda' className="about-profile-pic"/>
+            </div>
+          </section>
+          <br/>
+          <section className="section">
+            <div className="columns">
+              <div className="column info">
+                <p className='is-size-3'>Hey there!</p>
+                <p>My name is Sharanagouda K and I'm a front end web developer. I build responsive websites using modern technologies like React, Angular, Git, as well as good old jQuery. I also have experience with Ionic framework.<br/><br/>This blog contains my best answers to questions that UI developers struggle with.<br/>
+               Most of the posts are about React or Angular, with a few other random things thrown in.<br/><br/>Although I'm a front end developer I like challenges of all sorts so if you are looking for someone to work with, use the fancy contact form to get in touch!</p>
+                {/*<a href="http://iamtimsmith.com/TimSmith_resume.pdf" target="_blank" className="button" style={{marginTop:'20px'}}>My Resume</a>*/}
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     )
   }

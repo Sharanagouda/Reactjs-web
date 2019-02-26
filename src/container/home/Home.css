@@ -47,3 +47,12 @@ h3 {
   margin-top: -2em;
   margin-bottom: 2em;
 }
+.form-div-inHome{
+  display:flex;
+  flex:1;
+  justify-content:center;
+  padding-left:30%
+}
+.buttonTitle{
+  color:#fff
+}

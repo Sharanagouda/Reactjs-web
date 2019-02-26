@@ -5,7 +5,6 @@ import {Jombotran, Rrid, Row, Col, Image, Button} from "react-bootstrap";
 import "./Contactme.css";
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import CurrentLocation from "./CurrentLocation";
-
 const AnyReactComponent = ({ text }) => <div>{ text }</div>;
 
 class ContactMe extends Component{

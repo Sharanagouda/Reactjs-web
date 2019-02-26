@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import "./PostForm.css"
+import "./ContactForm.css"
 import {connect} from "react-redux";
-import {postNewData} from "../../../action";
 
 class PostForm extends Component {
 constructor(props){

@@ -16,3 +16,6 @@ ul li{
   display: inline;
   padding:10px;
 }
+li:hover{
+ text-decoration: none;
+}

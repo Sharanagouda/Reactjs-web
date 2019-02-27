@@ -11,7 +11,8 @@ background-image: `url("assets/mountain.jpeg")`;
    justify-content:center;
    align-items:center;
    flex:1;
-   flex-Direction:column
+   flex-Direction:column;
+       line-height: 1.5;
    
 }
 
@@ -54,5 +55,28 @@ h3 {
   padding-left:30%
 }
 .buttonTitle{
-  color:#fff
+  color:#000;
+  padding:10px;
+  padding-left:25px;
+   padding-right:25px;
+  border-color:#000;
+  border-style: solid;
+  border-width: 2px;
+  font-size:2vw;
+    font-weight: 700;
+}
+a:hover {
+  background-color: #000;
+   text-decoration: none;
+   color:#fff;
+}
+.fontHeader{
+  font-family: Playfair Display,serif;
+  font-weight: 700;
+  position: relative;
+  font-size:5vw;
+}
+.fontPersonText{
+  font-size:3vw;
+    font-weight: 700;
 }

@@ -9,9 +9,9 @@ export default class Home extends Component {
         return (
             <div className="main-home-div">
             <div className="content-div" style={{ backgroundImage : `url(${image_url})` }}>
-            <h2 style={{}}>Front end Developer </h2>
-            <p style={{}}>Person</p>
-            <button ><a href="#cform" className="buttonTitle"> Hire Me</a></button>
+            <h2 style={{}} className="fontHeader">Front end Developer </h2>
+            <p style={{}} className="fontPersonText">Person</p>
+            <a href="#cform" className="buttonTitle"> Hire Me</a>
             </div>
                
            

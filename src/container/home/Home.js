@@ -10,42 +10,65 @@ export default class Home extends Component {
             <div className="main-home-div">
             <div className="content-div" style={{ backgroundImage : `url(${image_url})` }}>
             <h2 style={{}} className="fontHeader">Front end Developer </h2>
-            <p style={{}} className="fontPersonText">Person</p>
+            {/*<p style={{}} className="fontPersonText">Person</p>*/}
             <a href="#cform" className="buttonTitle"> Hire Me</a>
             </div>
-               
-           
-
-         
-          <Row className="show-grid text-center">
-                <Col xs={12} sm={4} className="person-wrapper">
-                    <Image src="assets/sharan.jpeg" circle className="profile-pic" />
-                    <h3>Sharan</h3>
-                    <p>
-                        That's a crooked tree. We'll send him to Washington. These
-                        little son of a guns hide in your brush and you just have to
-                        push them out.
-            </p>
-                </Col>
-                <Col xs={12} sm={4} className="person-wrapper">
-                    <Image src="assets/sharan.jpeg" circle className="profile-pic" />
-                    <h3>sharanagouda</h3>
-                    <p>
-                        That's a crooked tree. We'll send him to Washington. These
-                        little son of a guns hide in your brush and you just have to
-                        push them out.
-            </p>
-                </Col>
-                <Col xs={12} sm={4} className="person-wrapper">
-                    <Image src="assets/sharan.jpeg" circle className="profile-pic" />
-                    <h3>Sharan</h3>
-                    <p>
-                        That's a crooked tree. We'll send him to Washington. These
-                        little son of a guns hide in your brush and you just have to
-                        push them out.
-            </p>
-                </Col>
-    </Row>
+           <div className="main-work-div">
+            <div  className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FF0", paddingBottom:"10px",display:"flex",flex:1,flexDirection:"row",justifyContent:"space-between" }}>
+            <div className="work-div" >
+                <Image src="assets/weatherinfo.png"  className="workImages" />
+            <p className="workedTechnology">
+                That's a crooked tree. We'll send him to Washington. These
+                little son of a guns hide in your brush and you just have to
+                push them out.</p>
+            </div>
+            </div>
+            <div  className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FF0", paddingBottom:"10px",display:"flex",flex:1,flexDirection:"row",justifyContent:"space-between" }}>
+            <div className="work-div" >
+                <Image src="assets/weatherinfo.png"  className="workImages" />
+         <p className="workedTechnology">
+                That's a crooked tree. We'll send him to Washington. These
+                little son of a guns hide in your brush and you just have to
+                push them out.</p>
+            </div>
+            </div>
+            <div  className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px",display:"flex",flex:1,flexDirection:"row",justifyContent:"space-between" }}>
+            <div className="work-div" >
+                <Image src="assets/weatherinfo.png"  className="workImages" />
+            <p className="workedTechnology">
+                That's a crooked tree. We'll send him to Washington. These
+                little son of a guns hide in your brush and you just have to
+                push them out.</p>
+            </div>
+            </div>
+            <div  className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px",display:"flex",flex:1,flexDirection:"row",justifyContent:"space-between" }}>
+            <div className="work-div" >
+                <Image src="assets/weatherinfo.png"  className="workImages" />
+            <p className="workedTechnology">
+                That's a crooked tree. We'll send him to Washington. These
+                little son of a guns hide in your brush and you just have to
+                push them out.</p>
+            </div>
+            </div>
+            <div  className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#000", paddingBottom:"10px",display:"flex",flex:1,flexDirection:"row",justifyContent:"space-between" }}>
+            <div className="work-div" >
+                <Image src="assets/weatherinfo.png"  className="workImages" />
+            <p className="workedTechnology">
+                That's a crooked tree. We'll send him to Washington. These
+                little son of a guns hide in your brush and you just have to
+                push them out.</p>
+            </div>
+            </div>
+            <div  className="col-lg-4 col-md-5 col-sm-8" style={{ backgroundColor:"#FFF", paddingBottom:"10px",display:"flex",flex:1,flexDirection:"row",justifyContent:"space-between" }}>
+            <div className="work-div" >
+                <Image src="assets/weatherinfo.png"  className="workImages" />
+            <p className="workedTechnology">
+                That's a crooked tree. We'll send him to Washington. These
+                little son of a guns hide in your brush and you just have to
+                push them out.</p>
+            </div>
+            </div>
+    </div>
     <div className="form-div-inHome" id="cform">
     <ContactFrom/>
     </div>

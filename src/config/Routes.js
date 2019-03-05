@@ -17,6 +17,7 @@ import ReduxCrudOperation from "../container/reduxCrud/ReduxCRUD";
 import WeatherAPI from "../container/weatherapi/WeatherAPI";
 import ShoppingCart from "../container/shoppingCart/ShoppingCart";
 import Todo from "../container/todo/Todo";
+import Es6Tutorials from "../container/tutos/es6/es6Tutorial";
 
 class Routes extends Component {
   render() {
@@ -40,6 +41,7 @@ class Routes extends Component {
           <Route path="/weatherapi" exact component={WeatherAPI} title="Weather information"/>
           <Route path="/shoppingCart" exact component={ShoppingCart} />
           <Route path="/todoApp" exact component={Todo} />
+          <Route path="/es6" exact component={Es6Tutorials} />
           <Route component={PageNotFound} />
           </Switch>
          <Footer/> 

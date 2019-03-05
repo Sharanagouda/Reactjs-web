@@ -11,17 +11,18 @@ class ContactMe extends Component{
     constructor(props){
         super(props);
         this.state={
-          
           name:'',
           contactno:'',
           email:'',
           subject:'',
           message:'',
-          messageSuccess:false
+          messageSuccess:false,
           }
           // binding this to event-handler functions
+
          
     }
+
 
     handleSubmit = (event) =>{
       event.preventDefault();
@@ -44,7 +45,6 @@ class ContactMe extends Component{
   }
 
   render() {
-   
 
       return (
         <div className="main-contact-div">

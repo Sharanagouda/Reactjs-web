@@ -27,13 +27,18 @@
 .topic-ImageDiv{
   flex: 20%;
   display: flex;
-  border-radius: 10px;
 }
 .topic-content{
 }
 .topic-Image{
   width:25%;
   height: 100%;;
+  margin: 0 1em 1em 0;
+  border-radius: 10px;
+}
+.topic-default-Image{
+  width:25%;
+  height: 100%;
   margin: 0 1em 1em 0;
   border-radius: 10px;
 }
